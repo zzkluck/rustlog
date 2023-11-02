@@ -1,40 +1,27 @@
-use std::fs::File;
-use std::io::Read;
-use std::collections::HashMap;
-use tqdm::Iter;
+mod log_parser;
+mod easylog;
 
-fn is_variable(token: &str) -> bool {
-    for c in token.chars(){
-        if c.is_numeric() {
-            return true;
-        }
-    }
-    false
+use std::path::PathBuf;
+use clap::{Parser};
+use crate::easylog::EasyLog;
+use crate::log_parser::LogParser;
+
+#[derive(Parser)]
+#[command(author, version, about)]
+struct Cli {
+    #[arg(short, long, value_name = "LOG_PATH")]
+    log_path: Option<PathBuf>
 }
 
-fn main() {
-    let mut f = File::open(r"C:\Users\zzkluck\Desktop\HDFS.log").unwrap();
-    let mut logs = String::new();
-    f.read_to_string(&mut logs).unwrap();
-    let lines: Vec<&str> = logs.split("\r\n").collect();
 
-    let mut cluster: HashMap<String, Vec<&str>> = HashMap::new();
-    for line in lines.iter().tqdm() {
-        let mut template = String::new();
-        for token in line.split(' ') {
-            if !is_variable(token) {
-                if template.len() != 0 {
-                    template.push(' ');
-                }
-                template.push_str(token);
-            }
-        }
-        if cluster.contains_key(&template) {
-            cluster.get_mut(&template).unwrap().push(line);
-        }
-        else {
-            cluster.insert(template, vec![line]);
-        }
+
+
+fn main() {
+    let cli = Cli::parse();
+    let easylog = EasyLog{};
+    if let Some(log_path) = cli.log_path.as_deref() {
+        let pl = easylog.parse_from_file(log_path);
+        println!("{:?}", pl.templates);
     }
-    println!("{:?}", cluster.keys());
+
 }

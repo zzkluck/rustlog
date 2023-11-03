@@ -1,5 +1,6 @@
 mod log_parser;
 mod easylog;
+mod evaluator;
 
 use std::path::PathBuf;
 use clap::{Args, Parser, Subcommand};

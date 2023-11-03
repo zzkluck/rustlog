@@ -1,0 +1,9 @@
+time_regex = '^(\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}\.\d{3})'
+time_format = '%m-%d %H:%M:%S.%f'
+specific = []
+[substitute]
+'(?<a>\w+)=([^\s]*)'            = '$a <$a>'
+'\".*?\"'                       = '<STR>'
+'([\w-]+\.){2,}[\w-]+'          = '<DOMAIN>'
+'<bottom of call stack>'        = '<BOCS>'
+'[:\s]+'                        = ' '

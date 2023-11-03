@@ -8,4 +8,8 @@ edition = "2021"
 [dependencies]
 regex = "*"
 tqdm = "*"
+log = "*"
+env_logger = "*"
+toml = "*"
+serde = {version = "*", features = ["derive"]}
 clap = {version = "*", features = ["derive"]}

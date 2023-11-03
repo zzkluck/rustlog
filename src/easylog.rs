@@ -1,6 +1,11 @@
 use std::collections::HashMap;
+use std::fs::File;
+use std::io::Read;
+use std::path::Path;
 use tqdm::Iter;
 use crate::log_parser::{LogParser, ParsedLog};
+use serde::Deserialize;
+use regex::Regex;
 
 fn is_variable(token: &str) -> bool {
     for c in token.chars(){
@@ -11,7 +16,50 @@ fn is_variable(token: &str) -> bool {
     false
 }
 
-pub struct EasyLog {}
+#[derive(Deserialize)]
+struct Config {
+    time_regex: String,
+    time_format: String,
+    specific: Vec<String>,
+    substitute: HashMap<String, String>
+}
+
+pub struct EasyLog {
+    time_regex: String,
+    time_format: String,
+    specific: Vec<Regex>,
+    substitute: Vec<(Regex, String)>
+}
+
+impl EasyLog {
+    pub fn new(config_path: &Path) -> Self{
+        let mut f = File::open(config_path)
+            .expect(&format!("Fail to open {}", config_path.to_str().unwrap()));
+        let mut buffer = String::new();
+        f.read_to_string(&mut buffer).expect("TODO: panic message");
+        let config: Config = toml::from_str(&buffer).expect("TODO: panic message");
+
+        let mut specific: Vec<Regex> = vec![];
+        for k in config.specific.iter() {
+            let re  = Regex::new(&k).unwrap();
+            specific.push(re);
+        }
+
+        let mut substitute: Vec<(Regex, String)> = vec![];
+        for (k,v) in config.substitute.into_iter() {
+            let re  = Regex::new(&k).unwrap();
+            substitute.push((re, v));
+        }
+
+        EasyLog {
+            time_regex: config.time_regex,
+            time_format: config.time_format,
+            specific,
+            substitute,
+        }
+    }
+}
+
 impl LogParser for EasyLog {
     fn parse(&self, lines: Vec<&str>) -> ParsedLog {
         let mut clusters: HashMap<String, Vec<String>> = HashMap::new();
@@ -38,15 +86,25 @@ impl LogParser for EasyLog {
     }
 
     fn parse_line(&self, line: &str) -> String {
-        let mut template = String::new();
+        let mut template:Vec<&str> = vec![];
+
+        for re in self.specific.iter() {
+            let result = re.find_iter(&line)
+                .map(|x| x.as_str());
+            template.extend(result);
+        }
+
+
+        let mut line = line.to_string();
+        for (re, sub) in self.substitute.iter() {
+            line = re.replace_all(&line, sub).parse().unwrap();
+        }
+
         for token in line.split(' ') {
             if !is_variable(token) {
-                if template.len() != 0 {
-                    template.push(' ');
-                }
-                template.push_str(token);
+                template.push(token);
             }
         }
-        template
+        template.join(" ")
     }
 }

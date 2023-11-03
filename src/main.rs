@@ -14,8 +14,6 @@ struct Cli {
 }
 
 
-
-
 fn main() {
     let cli = Cli::parse();
     let easylog = EasyLog{};
@@ -23,5 +21,4 @@ fn main() {
         let pl = easylog.parse_from_file(log_path);
         println!("{:?}", pl.templates);
     }
-
 }

@@ -1,13 +1,13 @@
 mod log_parser;
-mod easylog;
 mod evaluator;
-mod data_model;
+mod utils;
 mod dataset;
 
 use std::path::PathBuf;
 use clap::{Args, Parser, Subcommand};
-use crate::dataset::{AndroidDataset, LogDataset};
-use crate::easylog::EasyLog;
+use crate::dataset::LogDataset;
+use crate::dataset::android_dataset::AndroidDataset;
+use crate::log_parser::easylog::EasyLog;
 use crate::log_parser::LogParser;
 use crate::evaluator::get_accuracy;
 
@@ -44,7 +44,8 @@ fn main() {
             let mut pl = easylog.parse_from_file(&args.log_path);
             println!("{} templates found.", pl.templates.len());
             let dataset = AndroidDataset::from_file(&args.structured_path);
-            println!("{:?}", get_accuracy(dataset.iter_event_id(), pl.parsed_list))
+            println!("{:?}", get_accuracy(dataset.iter_event_id(),
+                                          pl.parsed_list))
         }
     }
 }

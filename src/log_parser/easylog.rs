@@ -3,9 +3,9 @@ use std::fs::File;
 use std::io::Read;
 use std::path::Path;
 use tqdm::Iter;
-use crate::log_parser::{LogParser, ParsedLog};
 use serde::Deserialize;
 use regex::Regex;
+use super::*;
 
 fn is_variable(token: &str) -> bool {
     for c in token.chars(){

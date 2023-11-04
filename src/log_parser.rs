@@ -1,3 +1,6 @@
+pub mod easylog;
+
+
 use std::fs::File;
 use std::io::Read;
 use std::collections::HashMap;

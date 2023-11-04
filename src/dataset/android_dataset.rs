@@ -3,6 +3,7 @@ use crate::utils::LogRecord;
 use super::*;
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct AndroidRecord {
     #[serde(rename="LineId")]
     line_id: u32,

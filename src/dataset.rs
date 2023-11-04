@@ -1,9 +1,6 @@
 pub mod android_dataset;
 
 use std::path::Path;
-use std::str::FromStr;
-
-use android_dataset::AndroidDataset;
 use chrono::prelude::*;
 use crate::utils::LogRecord;
 
@@ -21,6 +18,7 @@ pub trait LogDataset {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use android_dataset::AndroidDataset;
     # [test]
     fn iter_event_id_test() {
         let ad = AndroidDataset::from_file

@@ -24,6 +24,7 @@ struct Config {
     substitute: HashMap<String, String>
 }
 
+#[allow(dead_code)]
 pub struct EasyLog {
     time_regex: String,
     time_format: String,

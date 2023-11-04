@@ -7,8 +7,8 @@ use std::time::Instant;
 
 pub struct ParsedLog {
     pub templates: Vec<String>,
-    clusters: HashMap<String, Vec<String>>,
-    parsed_list: Vec<usize>,
+    pub clusters: HashMap<String, Vec<String>>,
+    pub parsed_list: Vec<usize>,
 }
 
 impl ParsedLog {

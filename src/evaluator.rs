@@ -17,7 +17,7 @@ fn counter<'a, T: Eq + Hash + 'a>(list: impl Iterator<Item=&'a T>) -> HashMap<&'
     counter
 }
 
-fn get_accuracy<T1: Eq + Hash, T2: Eq + Hash>
+pub(crate) fn get_accuracy<T1: Eq + Hash, T2: Eq + Hash>
 (ground_truth: Vec<T1>, parsed_result: Vec<T2>) -> (f64, f64, f64, f64) {
     let mut gt_counter: HashMap<&T1, Vec<usize>> = HashMap::new();
     for (i, event_id) in ground_truth.iter().enumerate() {

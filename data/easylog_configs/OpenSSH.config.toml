@@ -1,0 +1,5 @@
+specific = []
+[substitute]
+'(?<a>\w+)=([^\s]*)' = '$a <$a>'
+'user ([^\s]*)' = 'user <USERNAME>'
+'for ([^\s]*)'  = 'for <USERNAME>'

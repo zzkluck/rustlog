@@ -1,5 +1,4 @@
 use serde::Deserialize;
-use crate::utils::LogRecord;
 use super::*;
 
 #[derive(Debug, Deserialize)]

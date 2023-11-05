@@ -7,6 +7,7 @@ use std::collections::HashMap;
 use std::path::Path;
 use log::{info, debug};
 use std::time::Instant;
+use crate::log_parser::easylog::EasyLog;
 
 pub struct ParsedLog {
     pub templates: Vec<String>,

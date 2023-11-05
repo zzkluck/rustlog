@@ -1,0 +1,6 @@
+specific = []
+[substitute]
+'([\w-]+\.){2,}[\w-]+'  = '<DOMAIN>'
+'([\w-]+\.){1,}local'   = '<LOCAL_DOMAIN>'
+'(?<a>\w+)=([^\s]*)'    = '$a <$a>'
+'[:\(\)",\s]+'          = ' '

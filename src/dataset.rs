@@ -1,9 +1,24 @@
 pub mod android_dataset;
+pub mod loghub_common_dataset;
 
 use std::path::Path;
 use chrono::prelude::*;
-use crate::utils::LogRecord;
+use chrono::{DateTime, FixedOffset};
 
+#[allow(dead_code)]
+#[derive(Debug)]
+pub struct LogRecord {
+    pub index: u32,
+    pub event_id: String,
+    pub timestamp: DateTime<FixedOffset>,
+    pub attribute: String,
+    pub resource: String,
+    pub trace_id: String,
+    pub span_id: String,
+    pub severity: String,
+    pub body: String,
+    pub label: String
+}
 pub trait LogDataset {
     fn from_file(file_path: &Path) -> Self;
     fn get_records(&self) -> &Vec<LogRecord>;

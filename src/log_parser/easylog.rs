@@ -18,16 +18,12 @@ fn is_variable(token: &str) -> bool {
 
 #[derive(Deserialize)]
 struct Config {
-    time_regex: String,
-    time_format: String,
     specific: Vec<String>,
     substitute: HashMap<String, String>
 }
 
 #[allow(dead_code)]
 pub struct EasyLog {
-    time_regex: String,
-    time_format: String,
     specific: Vec<Regex>,
     substitute: Vec<(Regex, String)>
 }
@@ -53,8 +49,6 @@ impl EasyLog {
         }
 
         EasyLog {
-            time_regex: config.time_regex,
-            time_format: config.time_format,
             specific,
             substitute,
         }

@@ -1,0 +1,3 @@
+specific = []
+[substitute]
+'([\w-]+\.){2,}[\w-]+' = '<DOMAIN>'

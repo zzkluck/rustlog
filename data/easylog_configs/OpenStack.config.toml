@@ -1,0 +1,3 @@
+specific = []
+[substitute]
+'\/([\w-]+\/){1,}[\w-]+' = '<PATH>'

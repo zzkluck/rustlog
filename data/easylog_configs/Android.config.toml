@@ -1,4 +1,7 @@
-specific = []
+specific = [
+    '((?:true)|(?:false))',
+    '((?<=action=)[^,]+)',
+]
 [substitute]
 '(?<a>\w+)=([^\s]*)'            = '$a <$a>'
 '\".*?\"'                       = '<STR>'

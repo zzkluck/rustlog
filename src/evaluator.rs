@@ -1,5 +1,7 @@
 use std::collections::HashMap;
+use std::fmt::{Debug, Display};
 use std::hash::Hash;
+use log::debug;
 
 fn comb_2(n: u64) -> u64 {
     if n == 0 { panic!("Comb number should not be 0."); }
@@ -17,7 +19,7 @@ fn counter<'a, T: Eq + Hash + 'a>(list: impl Iterator<Item=&'a T>) -> HashMap<&'
     counter
 }
 
-pub(crate) fn get_accuracy<T1: Eq + Hash, T2: Eq + Hash>
+pub(crate) fn get_accuracy<T1: Eq + Hash + Debug, T2: Eq + Hash + Debug>
 (ground_truth: Vec<T1>, parsed_result: Vec<T2>) -> (f64, f64, f64, f64) {
     let mut gt_counter: HashMap<&T1, Vec<usize>> = HashMap::new();
     for (i, event_id) in ground_truth.iter().enumerate() {
@@ -46,6 +48,9 @@ pub(crate) fn get_accuracy<T1: Eq + Hash, T2: Eq + Hash>
             if gt_counter[ground_truth_event_id].len() == pr_counter[parsed_event_id].len() {
                 accurate_events += pr_counter[parsed_event_id].len() as u64;
             }
+        }
+        else {
+            debug!("Parsed Event {:?} map to {:?}", parsed_event_id, error_counter.keys())
         }
         for &count in error_counter.values() {
             if count > 1 {

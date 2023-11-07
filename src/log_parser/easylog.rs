@@ -4,7 +4,7 @@ use std::io::Read;
 use std::path::Path;
 use tqdm::Iter;
 use serde::Deserialize;
-use regex::Regex;
+use fancy_regex::Regex;
 use super::*;
 
 fn is_variable(token: &str) -> bool {
@@ -85,7 +85,7 @@ impl LogParser for EasyLog {
 
         for re in self.specific.iter() {
             let result = re.find_iter(&line)
-                .map(|x| x.as_str());
+                .map(|x| x.unwrap().as_str());
             template.extend(result);
         }
 

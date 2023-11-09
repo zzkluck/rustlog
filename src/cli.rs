@@ -1,7 +1,7 @@
 pub mod args;
 pub mod commands;
 
-use clap::{Args, Parser, Subcommand};
+use clap::{Parser};
 use crate::cli::args::{CliOperation};
 
 #[derive(Parser)]

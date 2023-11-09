@@ -1,0 +1,413 @@
+
+00:52:46 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Android/Android_2k.log"
+00:52:46 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 250.4µs.
+00:52:46 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.2407ms.
+00:52:46 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 234.3361ms.
+00:52:46 [INFO] Android: 171 templates found.
+00:52:46 [INFO] Android: Group Accuracy 0.8455
+00:52:46 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Apache/Apache_2k.log"
+00:52:46 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 112.6µs.
+00:52:46 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 789.8µs.
+00:52:46 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.1699ms.
+00:52:46 [INFO] Apache: 12 templates found.
+00:52:46 [INFO] Apache: Group Accuracy 0
+00:52:46 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/BGL/BGL_2k.log"
+00:52:46 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 91.9µs.
+00:52:46 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.4316ms.
+00:52:46 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 96.4822ms.
+00:52:46 [INFO] BGL: 160 templates found.
+00:52:46 [INFO] BGL: Group Accuracy 0.9175
+00:52:46 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Hadoop/Hadoop_2k.log"
+00:52:46 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 201.9µs.
+00:52:46 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.6083ms.
+00:52:46 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 35.7193ms.
+00:52:46 [INFO] Hadoop: 127 templates found.
+00:52:46 [DEBUG] (1) rustlog::evaluator: Parsed Event 59 map to ["E87", "E65"]
+00:52:46 [INFO] Hadoop: Group Accuracy 0.7275
+00:52:46 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HDFS/HDFS_2k.log"
+00:52:46 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 130.3µs.
+00:52:46 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.2119ms.
+00:52:46 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.1596ms.
+00:52:46 [INFO] HDFS: 14 templates found.
+00:52:46 [INFO] HDFS: Group Accuracy 1
+00:52:46 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HealthApp/HealthApp_2k.log"
+00:52:46 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 107.3µs.
+00:52:46 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 819.4µs.
+00:52:46 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 48.87ms.
+00:52:46 [INFO] HealthApp: 75 templates found.
+00:52:46 [INFO] HealthApp: Group Accuracy 1
+00:52:46 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HPC/HPC_2k.log"
+00:52:46 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 86.6µs.
+00:52:46 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 703.2µs.
+00:52:46 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 7.7806ms.
+00:52:46 [INFO] HPC: 57 templates found.
+00:52:46 [DEBUG] (1) rustlog::evaluator: Parsed Event 56 map to ["E30", "E28", "E29"]
+00:52:46 [INFO] HPC: Group Accuracy 0.804
+00:52:46 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Linux/Linux_2k.log"
+00:52:46 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 113µs.
+00:52:46 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 983.1µs.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 59.527ms.
+00:52:47 [INFO] Linux: 150 templates found.
+00:52:47 [DEBUG] (1) rustlog::evaluator: Parsed Event 49 map to ["E15", "E16"]
+00:52:47 [DEBUG] (1) rustlog::evaluator: Parsed Event 2 map to ["E18", "E17"]
+00:52:47 [DEBUG] (1) rustlog::evaluator: Parsed Event 18 map to ["E18", "E19"]
+00:52:47 [INFO] Linux: Group Accuracy 0.0885
+00:52:47 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Mac/Mac_2k.log"
+00:52:47 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 89.8µs.
+00:52:47 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.3971ms.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 92.3756ms.
+00:52:47 [INFO] Mac: 473 templates found.
+00:52:47 [DEBUG] (1) rustlog::evaluator: Parsed Event 97 map to ["E320", "E319"]
+00:52:47 [DEBUG] (1) rustlog::evaluator: Parsed Event 28 map to ["E111", "E112"]
+00:52:47 [INFO] Mac: Group Accuracy 0.2845
+00:52:47 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenSSH/OpenSSH_2k.log"
+00:52:47 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 119.7µs.
+00:52:47 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 969.2µs.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 51.0432ms.
+00:52:47 [INFO] OpenSSH: 26 templates found.
+00:52:47 [INFO] OpenSSH: Group Accuracy 1
+00:52:47 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenStack/OpenStack_2k.log"
+00:52:47 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 289.4µs.
+00:52:47 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 2.4285ms.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 25.8312ms.
+00:52:47 [INFO] OpenStack: 51 templates found.
+00:52:47 [INFO] OpenStack: Group Accuracy 0.513
+00:52:47 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Proxifier/Proxifier_2k.log"
+00:52:47 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 116.9µs.
+00:52:47 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.0187ms.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.036ms.
+00:52:47 [INFO] Proxifier: 100 templates found.
+00:52:47 [INFO] Proxifier: Group Accuracy 0
+00:52:47 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Spark/Spark_2k.log"
+00:52:47 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 98.7µs.
+00:52:47 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 852.4µs.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 11.885ms.
+00:52:47 [INFO] Spark: 36 templates found.
+00:52:47 [INFO] Spark: Group Accuracy 1
+00:52:47 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Thunderbird/Thunderbird_2k.log"
+00:52:47 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 194.7µs.
+00:52:47 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.3524ms.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 10.1792ms.
+00:52:47 [INFO] Thunderbird: 196 templates found.
+00:52:47 [INFO] Thunderbird: Group Accuracy 0.9655
+00:52:47 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Windows/Windows_2k.log"
+00:52:47 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 159µs.
+00:52:47 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.1996ms.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.0572ms.
+00:52:47 [INFO] Windows: 57 templates found.
+00:52:47 [INFO] Windows: Group Accuracy 0.996
+00:52:47 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Zookeeper/Zookeeper_2k.log"
+00:52:47 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 140.5µs.
+00:52:47 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.1899ms.
+00:52:47 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.3613ms.
+00:52:47 [INFO] Zookeeper: 55 templates found.
+00:52:47 [INFO] Zookeeper: Group Accuracy 0.9945
+Thu, 09 Nov 2023 00:53:52 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Android/Android_2k.log"
+Thu, 09 Nov 2023 00:53:52 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 168.9µs.
+Thu, 09 Nov 2023 00:53:52 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.2206ms.
+Thu, 09 Nov 2023 00:53:52 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 237.6032ms.
+Thu, 09 Nov 2023 00:53:52 +0000 [INFO] Android: 173 templates found.
+Thu, 09 Nov 2023 00:53:52 +0000 [INFO] Android: Group Accuracy 0.8195
+Thu, 09 Nov 2023 00:53:52 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Apache/Apache_2k.log"
+Thu, 09 Nov 2023 00:53:52 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 107.9µs.
+Thu, 09 Nov 2023 00:53:52 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 791.4µs.
+Thu, 09 Nov 2023 00:53:52 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.5641ms.
+Thu, 09 Nov 2023 00:53:52 +0000 [INFO] Apache: 12 templates found.
+Thu, 09 Nov 2023 00:53:52 +0000 [INFO] Apache: Group Accuracy 0
+Thu, 09 Nov 2023 00:53:52 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/BGL/BGL_2k.log"
+Thu, 09 Nov 2023 00:53:52 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 103.7µs.
+Thu, 09 Nov 2023 00:53:52 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.8983ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 92.1197ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] BGL: 163 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] BGL: Group Accuracy 0.9175
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Hadoop/Hadoop_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 163.6µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.5814ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 35.6426ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Hadoop: 127 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::evaluator: Parsed Event 59 map to ["E65", "E87"]
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Hadoop: Group Accuracy 0.7275
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HDFS/HDFS_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 123.6µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.2506ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.9341ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] HDFS: 14 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] HDFS: Group Accuracy 1
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HealthApp/HealthApp_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 88µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 869.7µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 48.0462ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] HealthApp: 75 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] HealthApp: Group Accuracy 1
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HPC/HPC_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 84.8µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 727.4µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 7.4136ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] HPC: 57 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::evaluator: Parsed Event 56 map to ["E29", "E28", "E30"]
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] HPC: Group Accuracy 0.804
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Linux/Linux_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 99.2µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 982.9µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 58.3022ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Linux: 150 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::evaluator: Parsed Event 49 map to ["E16", "E15"]
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::evaluator: Parsed Event 2 map to ["E18", "E17"]
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::evaluator: Parsed Event 18 map to ["E19", "E18"]
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Linux: Group Accuracy 0.0885
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Mac/Mac_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 145.4µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.3957ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 91.0554ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Mac: 473 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::evaluator: Parsed Event 97 map to ["E319", "E320"]
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::evaluator: Parsed Event 28 map to ["E111", "E112"]
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Mac: Group Accuracy 0.2845
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenSSH/OpenSSH_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 147.9µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 970µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 49.8799ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] OpenSSH: 26 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] OpenSSH: Group Accuracy 1
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenStack/OpenStack_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 221.5µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 2.3874ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 26.2519ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] OpenStack: 51 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] OpenStack: Group Accuracy 0.513
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Proxifier/Proxifier_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 55.9µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.0114ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.0134ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Proxifier: 100 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Proxifier: Group Accuracy 0
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Spark/Spark_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 98.2µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 836.3µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 12.3623ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Spark: 36 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Spark: Group Accuracy 1
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Thunderbird/Thunderbird_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 128.2µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.5736ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 10.0788ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Thunderbird: 196 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Thunderbird: Group Accuracy 0.9655
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Windows/Windows_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 139.7µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.1785ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 14.9979ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Windows: 57 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Windows: Group Accuracy 0.996
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Zookeeper/Zookeeper_2k.log"
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 123.6µs.
+Thu, 09 Nov 2023 00:53:53 +0000 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.1658ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.1572ms.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Zookeeper: 55 templates found.
+Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Zookeeper: Group Accuracy 0.9945
+2023-11-09T00:54:08.4908743Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Android/Android_2k.log"
+2023-11-09T00:54:08.4914906Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 136.8µs.
+2023-11-09T00:54:08.4928053Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.1956ms.
+2023-11-09T00:54:08.722108Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 229.1601ms.
+2023-11-09T00:54:08.7225236Z [INFO] Android: 171 templates found.
+2023-11-09T00:54:08.7333883Z [INFO] Android: Group Accuracy 0.8455
+2023-11-09T00:54:08.7355677Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Apache/Apache_2k.log"
+2023-11-09T00:54:08.7359548Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 87.9µs.
+2023-11-09T00:54:08.7368536Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 788.8µs.
+2023-11-09T00:54:08.7455193Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.4936ms.
+2023-11-09T00:54:08.7458547Z [INFO] Apache: 12 templates found.
+2023-11-09T00:54:08.7539945Z [INFO] Apache: Group Accuracy 0
+2023-11-09T00:54:08.7790895Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/BGL/BGL_2k.log"
+2023-11-09T00:54:08.7795655Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 147.4µs.
+2023-11-09T00:54:08.7811144Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.4385ms.
+2023-11-09T00:54:08.8769961Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 95.7507ms.
+2023-11-09T00:54:08.8773591Z [INFO] BGL: 160 templates found.
+2023-11-09T00:54:08.887433Z [INFO] BGL: Group Accuracy 0.9175
+2023-11-09T00:54:08.9017016Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Hadoop/Hadoop_2k.log"
+2023-11-09T00:54:08.9022045Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 161.5µs.
+2023-11-09T00:54:08.9038836Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.5703ms.
+2023-11-09T00:54:08.9390833Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 35.0683ms.
+2023-11-09T00:54:08.9394922Z [INFO] Hadoop: 127 templates found.
+2023-11-09T00:54:08.9496142Z [DEBUG] (1) rustlog::evaluator: Parsed Event 59 map to ["E65", "E87"]
+2023-11-09T00:54:08.9499805Z [INFO] Hadoop: Group Accuracy 0.7275
+2023-11-09T00:54:08.9512573Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HDFS/HDFS_2k.log"
+2023-11-09T00:54:08.9516584Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 119.6µs.
+2023-11-09T00:54:08.952997Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.2279ms.
+2023-11-09T00:54:08.9623364Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.2068ms.
+2023-11-09T00:54:08.9627138Z [INFO] HDFS: 14 templates found.
+2023-11-09T00:54:08.9721625Z [INFO] HDFS: Group Accuracy 1
+2023-11-09T00:54:08.9827683Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HealthApp/HealthApp_2k.log"
+2023-11-09T00:54:08.983235Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 101.6µs.
+2023-11-09T00:54:08.9841654Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 820µs.
+2023-11-09T00:54:09.0309248Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 46.6345ms.
+2023-11-09T00:54:09.0312957Z [INFO] HealthApp: 75 templates found.
+2023-11-09T00:54:09.0400606Z [INFO] HealthApp: Group Accuracy 1
+2023-11-09T00:54:09.0414553Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HPC/HPC_2k.log"
+2023-11-09T00:54:09.0418454Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 88.5µs.
+2023-11-09T00:54:09.042665Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 707.3µs.
+2023-11-09T00:54:09.0502362Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 7.4395ms.
+2023-11-09T00:54:09.0505298Z [INFO] HPC: 57 templates found.
+2023-11-09T00:54:09.0591836Z [DEBUG] (1) rustlog::evaluator: Parsed Event 56 map to ["E29", "E28", "E30"]
+2023-11-09T00:54:09.0595983Z [INFO] HPC: Group Accuracy 0.804
+2023-11-09T00:54:09.0905271Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Linux/Linux_2k.log"
+2023-11-09T00:54:09.0910453Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 112.9µs.
+2023-11-09T00:54:09.0921385Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 979.5µs.
+2023-11-09T00:54:09.1522273Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 59.9525ms.
+2023-11-09T00:54:09.1526237Z [INFO] Linux: 150 templates found.
+2023-11-09T00:54:09.1613576Z [DEBUG] (1) rustlog::evaluator: Parsed Event 2 map to ["E17", "E18"]
+2023-11-09T00:54:09.1615764Z [DEBUG] (1) rustlog::evaluator: Parsed Event 49 map to ["E15", "E16"]
+2023-11-09T00:54:09.1619002Z [DEBUG] (1) rustlog::evaluator: Parsed Event 18 map to ["E18", "E19"]
+2023-11-09T00:54:09.162238Z [INFO] Linux: Group Accuracy 0.0885
+2023-11-09T00:54:09.1916148Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Mac/Mac_2k.log"
+2023-11-09T00:54:09.1920305Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 85.2µs.
+2023-11-09T00:54:09.1935186Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.3772ms.
+2023-11-09T00:54:09.2845286Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 90.8789ms.
+2023-11-09T00:54:09.2848335Z [INFO] Mac: 473 templates found.
+2023-11-09T00:54:09.2950468Z [DEBUG] (1) rustlog::evaluator: Parsed Event 28 map to ["E112", "E111"]
+2023-11-09T00:54:09.2957669Z [DEBUG] (1) rustlog::evaluator: Parsed Event 97 map to ["E319", "E320"]
+2023-11-09T00:54:09.2962841Z [INFO] Mac: Group Accuracy 0.2845
+2023-11-09T00:54:09.3082194Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenSSH/OpenSSH_2k.log"
+2023-11-09T00:54:09.3087221Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 123.2µs.
+2023-11-09T00:54:09.309815Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 982.3µs.
+2023-11-09T00:54:09.3584418Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 48.4931ms.
+2023-11-09T00:54:09.3587919Z [INFO] OpenSSH: 26 templates found.
+2023-11-09T00:54:09.3682994Z [INFO] OpenSSH: Group Accuracy 1
+2023-11-09T00:54:09.3778611Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenStack/OpenStack_2k.log"
+2023-11-09T00:54:09.3784389Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 237.9µs.
+2023-11-09T00:54:09.3811661Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 2.6166ms.
+2023-11-09T00:54:09.4069947Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 25.6838ms.
+2023-11-09T00:54:09.4073665Z [INFO] OpenStack: 51 templates found.
+2023-11-09T00:54:09.4194485Z [INFO] OpenStack: Group Accuracy 0.513
+2023-11-09T00:54:09.4219457Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Proxifier/Proxifier_2k.log"
+2023-11-09T00:54:09.4224768Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 207.1µs.
+2023-11-09T00:54:09.4236295Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.0391ms.
+2023-11-09T00:54:09.4388891Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.1282ms.
+2023-11-09T00:54:09.4392527Z [INFO] Proxifier: 100 templates found.
+2023-11-09T00:54:09.44862Z [INFO] Proxifier: Group Accuracy 0
+2023-11-09T00:54:09.4532769Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Spark/Spark_2k.log"
+2023-11-09T00:54:09.4536665Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 89.3µs.
+2023-11-09T00:54:09.4546396Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 866.1µs.
+2023-11-09T00:54:09.4671905Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 12.4187ms.
+2023-11-09T00:54:09.4675359Z [INFO] Spark: 36 templates found.
+2023-11-09T00:54:09.4765833Z [INFO] Spark: Group Accuracy 1
+2023-11-09T00:54:09.4777311Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Thunderbird/Thunderbird_2k.log"
+2023-11-09T00:54:09.4781964Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 134.6µs.
+2023-11-09T00:54:09.4796764Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.3685ms.
+2023-11-09T00:54:09.4899798Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 10.1697ms.
+2023-11-09T00:54:09.4903191Z [INFO] Thunderbird: 196 templates found.
+2023-11-09T00:54:09.5010231Z [INFO] Thunderbird: Group Accuracy 0.9655
+2023-11-09T00:54:09.5020998Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Windows/Windows_2k.log"
+2023-11-09T00:54:09.5025273Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 126.2µs.
+2023-11-09T00:54:09.5038334Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.1965ms.
+2023-11-09T00:54:09.5191724Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.2035ms.
+2023-11-09T00:54:09.5194982Z [INFO] Windows: 57 templates found.
+2023-11-09T00:54:09.5292562Z [INFO] Windows: Group Accuracy 0.996
+2023-11-09T00:54:09.5303062Z [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Zookeeper/Zookeeper_2k.log"
+2023-11-09T00:54:09.5307421Z [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 122.7µs.
+2023-11-09T00:54:09.5320259Z [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.1715ms.
+2023-11-09T00:54:09.5416698Z [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.5123ms.
+2023-11-09T00:54:09.5419963Z [INFO] Zookeeper: 55 templates found.
+2023-11-09T00:54:09.5514224Z [INFO] Zookeeper: Group Accuracy 0.9945
+2023-11-09T08:56:38.9842815+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Android/Android_2k.log"
+2023-11-09T08:56:38.9849208+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 147.5µs.
+2023-11-09T08:56:38.9862564+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.2029ms.
+2023-11-09T08:56:39.2183647+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 231.9557ms.
+2023-11-09T08:56:39.2187692+08:00 [INFO] Android: 171 templates found.
+2023-11-09T08:56:39.2295486+08:00 [INFO] Android: Group Accuracy 0.8455
+2023-11-09T08:56:39.2311197+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Apache/Apache_2k.log"
+2023-11-09T08:56:39.2315259+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 93.3µs.
+2023-11-09T08:56:39.2324254+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 775µs.
+2023-11-09T08:56:39.2411817+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.6181ms.
+2023-11-09T08:56:39.2415205+08:00 [INFO] Apache: 12 templates found.
+2023-11-09T08:56:39.2500638+08:00 [INFO] Apache: Group Accuracy 0
+2023-11-09T08:56:39.2754291+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/BGL/BGL_2k.log"
+2023-11-09T08:56:39.2759622+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 190.2µs.
+2023-11-09T08:56:39.2775244+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.4383ms.
+2023-11-09T08:56:39.3698006+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 92.1311ms.
+2023-11-09T08:56:39.3701755+08:00 [INFO] BGL: 160 templates found.
+2023-11-09T08:56:39.3805005+08:00 [INFO] BGL: Group Accuracy 0.9175
+2023-11-09T08:56:39.3948875+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Hadoop/Hadoop_2k.log"
+2023-11-09T08:56:39.3954199+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 178.4µs.
+2023-11-09T08:56:39.3971665+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.6227ms.
+2023-11-09T08:56:39.4323279+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 35.0138ms.
+2023-11-09T08:56:39.432682+08:00 [INFO] Hadoop: 127 templates found.
+2023-11-09T08:56:39.4424863+08:00 [DEBUG] (1) rustlog::evaluator: Parsed Event 59 map to ["E87", "E65"]
+2023-11-09T08:56:39.4432073+08:00 [INFO] Hadoop: Group Accuracy 0.7275
+2023-11-09T08:56:39.4450003+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HDFS/HDFS_2k.log"
+2023-11-09T08:56:39.4454836+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 155.5µs.
+2023-11-09T08:56:39.44683+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.2231ms.
+2023-11-09T08:56:39.4563966+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.4161ms.
+2023-11-09T08:56:39.4567722+08:00 [INFO] HDFS: 14 templates found.
+2023-11-09T08:56:39.4665361+08:00 [INFO] HDFS: Group Accuracy 1
+2023-11-09T08:56:39.4771979+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HealthApp/HealthApp_2k.log"
+2023-11-09T08:56:39.4776368+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 84.4µs.
+2023-11-09T08:56:39.4785786+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 818.5µs.
+2023-11-09T08:56:39.5257537+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 47.0304ms.
+2023-11-09T08:56:39.5261661+08:00 [INFO] HealthApp: 75 templates found.
+2023-11-09T08:56:39.5350722+08:00 [INFO] HealthApp: Group Accuracy 1
+2023-11-09T08:56:39.5364694+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HPC/HPC_2k.log"
+2023-11-09T08:56:39.5368479+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 87.4µs.
+2023-11-09T08:56:39.5376694+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 698.7µs.
+2023-11-09T08:56:39.5454308+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 7.6184ms.
+2023-11-09T08:56:39.5458133+08:00 [INFO] HPC: 57 templates found.
+2023-11-09T08:56:39.5543324+08:00 [DEBUG] (1) rustlog::evaluator: Parsed Event 56 map to ["E29", "E28", "E30"]
+2023-11-09T08:56:39.5548144+08:00 [INFO] HPC: Group Accuracy 0.804
+2023-11-09T08:56:39.5858527+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Linux/Linux_2k.log"
+2023-11-09T08:56:39.5863391+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 87µs.
+2023-11-09T08:56:39.5874667+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.0062ms.
+2023-11-09T08:56:39.6460727+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 58.4591ms.
+2023-11-09T08:56:39.6463816+08:00 [INFO] Linux: 150 templates found.
+2023-11-09T08:56:39.6552994+08:00 [DEBUG] (1) rustlog::evaluator: Parsed Event 18 map to ["E18", "E19"]
+2023-11-09T08:56:39.6555478+08:00 [DEBUG] (1) rustlog::evaluator: Parsed Event 49 map to ["E16", "E15"]
+2023-11-09T08:56:39.6558882+08:00 [DEBUG] (1) rustlog::evaluator: Parsed Event 2 map to ["E17", "E18"]
+2023-11-09T08:56:39.6563296+08:00 [INFO] Linux: Group Accuracy 0.0885
+2023-11-09T08:56:39.68542+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Mac/Mac_2k.log"
+2023-11-09T08:56:39.6859455+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 158.7µs.
+2023-11-09T08:56:39.6874286+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.3583ms.
+2023-11-09T08:56:39.7761813+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 88.6062ms.
+2023-11-09T08:56:39.7765722+08:00 [INFO] Mac: 473 templates found.
+2023-11-09T08:56:39.7869392+08:00 [DEBUG] (1) rustlog::evaluator: Parsed Event 28 map to ["E111", "E112"]
+2023-11-09T08:56:39.7878795+08:00 [DEBUG] (1) rustlog::evaluator: Parsed Event 97 map to ["E320", "E319"]
+2023-11-09T08:56:39.7883699+08:00 [INFO] Mac: Group Accuracy 0.2845
+2023-11-09T08:56:39.8006353+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenSSH/OpenSSH_2k.log"
+2023-11-09T08:56:39.801215+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 158.5µs.
+2023-11-09T08:56:39.8023146+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 973.1µs.
+2023-11-09T08:56:39.8522287+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 49.7649ms.
+2023-11-09T08:56:39.8527213+08:00 [INFO] OpenSSH: 26 templates found.
+2023-11-09T08:56:39.8620238+08:00 [INFO] OpenSSH: Group Accuracy 1
+2023-11-09T08:56:39.8714492+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenStack/OpenStack_2k.log"
+2023-11-09T08:56:39.8720522+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 232.9µs.
+2023-11-09T08:56:39.8745691+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 2.3923ms.
+2023-11-09T08:56:39.9009353+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 26.22ms.
+2023-11-09T08:56:39.9013839+08:00 [INFO] OpenStack: 51 templates found.
+2023-11-09T08:56:39.9132376+08:00 [INFO] OpenStack: Group Accuracy 0.513
+2023-11-09T08:56:39.9154525+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Proxifier/Proxifier_2k.log"
+2023-11-09T08:56:39.9158836+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 108.3µs.
+2023-11-09T08:56:39.9170229+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.0175ms.
+2023-11-09T08:56:39.9324169+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.2508ms.
+2023-11-09T08:56:39.9327772+08:00 [INFO] Proxifier: 100 templates found.
+2023-11-09T08:56:39.9422983+08:00 [INFO] Proxifier: Group Accuracy 0
+2023-11-09T08:56:39.946503+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Spark/Spark_2k.log"
+2023-11-09T08:56:39.9469322+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 112.4µs.
+2023-11-09T08:56:39.947907+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 850.8µs.
+2023-11-09T08:56:39.9604442+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 12.3929ms.
+2023-11-09T08:56:39.9608509+08:00 [INFO] Spark: 36 templates found.
+2023-11-09T08:56:39.9701358+08:00 [INFO] Spark: Group Accuracy 1
+2023-11-09T08:56:39.9715408+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Thunderbird/Thunderbird_2k.log"
+2023-11-09T08:56:39.9720633+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 166.2µs.
+2023-11-09T08:56:39.9735551+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.3668ms.
+2023-11-09T08:56:39.9840352+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 10.3376ms.
+2023-11-09T08:56:39.9844309+08:00 [INFO] Thunderbird: 196 templates found.
+2023-11-09T08:56:39.9956137+08:00 [INFO] Thunderbird: Group Accuracy 0.9655
+2023-11-09T08:56:39.9968851+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Windows/Windows_2k.log"
+2023-11-09T08:56:39.9973763+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 130.7µs.
+2023-11-09T08:56:39.9986869+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.1868ms.
+2023-11-09T08:56:40.0138535+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.0129ms.
+2023-11-09T08:56:40.0144796+08:00 [INFO] Windows: 57 templates found.
+2023-11-09T08:56:40.0242778+08:00 [INFO] Windows: Group Accuracy 0.996
+2023-11-09T08:56:40.0253345+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Zookeeper/Zookeeper_2k.log"
+2023-11-09T08:56:40.0257932+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 130.3µs.
+2023-11-09T08:56:40.0271069+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:48] Split raw text to 2000 log lines. Time cost: 1.183ms.
+2023-11-09T08:56:40.0366719+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.415ms.
+2023-11-09T08:56:40.0370814+08:00 [INFO] Zookeeper: 55 templates found.
+2023-11-09T08:56:40.0466769+08:00 [INFO] Zookeeper: Group Accuracy 0.9945

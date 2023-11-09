@@ -411,3 +411,401 @@ Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Zookeeper: Group Accuracy 0.9945
 2023-11-09T08:56:40.0366719+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.415ms.
 2023-11-09T08:56:40.0370814+08:00 [INFO] Zookeeper: 55 templates found.
 2023-11-09T08:56:40.0466769+08:00 [INFO] Zookeeper: Group Accuracy 0.9945
+2023-11-09T09:21:50.9997306+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Android/Android_2k.log"
+2023-11-09T09:21:51.0003325+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 143.7µs.
+2023-11-09T09:21:51.0017308+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.2577ms.
+2023-11-09T09:21:51.2271954+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 225.3073ms.
+2023-11-09T09:21:51.2275459+08:00 [INFO] Android: 171 templates found.
+2023-11-09T09:21:51.2383831+08:00 [INFO] Android: Group Accuracy 0.8455
+2023-11-09T09:21:51.2400372+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Apache/Apache_2k.log"
+2023-11-09T09:21:51.2404746+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 128.3µs.
+2023-11-09T09:21:51.2414636+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 867.3µs.
+2023-11-09T09:21:51.2500504+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.4442ms.
+2023-11-09T09:21:51.2503653+08:00 [INFO] Apache: 12 templates found.
+2023-11-09T09:21:51.2586085+08:00 [INFO] Apache: Group Accuracy 0
+2023-11-09T09:21:51.2835299+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/BGL/BGL_2k.log"
+2023-11-09T09:21:51.283972+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 95.9µs.
+2023-11-09T09:21:51.2856077+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.5109ms.
+2023-11-09T09:21:51.3792451+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 93.4912ms.
+2023-11-09T09:21:51.3796092+08:00 [INFO] BGL: 160 templates found.
+2023-11-09T09:21:51.3895807+08:00 [INFO] BGL: Group Accuracy 0.9175
+2023-11-09T09:21:51.4065656+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Hadoop/Hadoop_2k.log"
+2023-11-09T09:21:51.4071302+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 176.4µs.
+2023-11-09T09:21:51.4089433+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.6874ms.
+2023-11-09T09:21:51.4439237+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 34.8322ms.
+2023-11-09T09:21:51.4443313+08:00 [INFO] Hadoop: 127 templates found.
+2023-11-09T09:21:51.4546328+08:00 [INFO] Hadoop: Group Accuracy 0.7275
+2023-11-09T09:21:51.455976+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HDFS/HDFS_2k.log"
+2023-11-09T09:21:51.4563958+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 125.6µs.
+2023-11-09T09:21:51.4578142+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.2962ms.
+2023-11-09T09:21:51.4669418+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.9866ms.
+2023-11-09T09:21:51.4672314+08:00 [INFO] HDFS: 14 templates found.
+2023-11-09T09:21:51.4775563+08:00 [INFO] HDFS: Group Accuracy 1
+2023-11-09T09:21:51.4878382+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HealthApp/HealthApp_2k.log"
+2023-11-09T09:21:51.4883245+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 124µs.
+2023-11-09T09:21:51.4892826+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 839.4µs.
+2023-11-09T09:21:51.5356178+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 46.1926ms.
+2023-11-09T09:21:51.5360266+08:00 [INFO] HealthApp: 75 templates found.
+2023-11-09T09:21:51.5445408+08:00 [INFO] HealthApp: Group Accuracy 1
+2023-11-09T09:21:51.5457162+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HPC/HPC_2k.log"
+2023-11-09T09:21:51.5460906+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 86.5µs.
+2023-11-09T09:21:51.5469597+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 735.4µs.
+2023-11-09T09:21:51.5545942+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 7.4937ms.
+2023-11-09T09:21:51.5549382+08:00 [INFO] HPC: 57 templates found.
+2023-11-09T09:21:51.5638281+08:00 [INFO] HPC: Group Accuracy 0.804
+2023-11-09T09:21:51.593658+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Linux/Linux_2k.log"
+2023-11-09T09:21:51.5941835+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 118.8µs.
+2023-11-09T09:21:51.5953281+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.0205ms.
+2023-11-09T09:21:51.6527444+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 57.2711ms.
+2023-11-09T09:21:51.6530868+08:00 [INFO] Linux: 150 templates found.
+2023-11-09T09:21:51.6624413+08:00 [INFO] Linux: Group Accuracy 0.0885
+2023-11-09T09:21:51.7044211+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Mac/Mac_2k.log"
+2023-11-09T09:21:51.704853+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 92.2µs.
+2023-11-09T09:21:51.7064105+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.4321ms.
+2023-11-09T09:21:51.7966169+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 90.0607ms.
+2023-11-09T09:21:51.7969635+08:00 [INFO] Mac: 473 templates found.
+2023-11-09T09:21:51.8082047+08:00 [INFO] Mac: Group Accuracy 0.2845
+2023-11-09T09:21:51.8200951+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenSSH/OpenSSH_2k.log"
+2023-11-09T09:21:51.8205736+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 119.1µs.
+2023-11-09T09:21:51.8217207+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.0239ms.
+2023-11-09T09:21:51.8724954+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 50.6295ms.
+2023-11-09T09:21:51.8728619+08:00 [INFO] OpenSSH: 26 templates found.
+2023-11-09T09:21:51.8818581+08:00 [INFO] OpenSSH: Group Accuracy 1
+2023-11-09T09:21:51.8912741+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenStack/OpenStack_2k.log"
+2023-11-09T09:21:51.8919002+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 248.6µs.
+2023-11-09T09:21:51.8945802+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 2.553ms.
+2023-11-09T09:21:51.9203735+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 25.6454ms.
+2023-11-09T09:21:51.9207443+08:00 [INFO] OpenStack: 51 templates found.
+2023-11-09T09:21:51.9321494+08:00 [INFO] OpenStack: Group Accuracy 0.513
+2023-11-09T09:21:51.93423+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Proxifier/Proxifier_2k.log"
+2023-11-09T09:21:51.9346442+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 68.7µs.
+2023-11-09T09:21:51.9358298+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.0633ms.
+2023-11-09T09:21:51.9505262+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 14.5524ms.
+2023-11-09T09:21:51.9508817+08:00 [INFO] Proxifier: 100 templates found.
+2023-11-09T09:21:51.9599709+08:00 [INFO] Proxifier: Group Accuracy 0
+2023-11-09T09:21:51.964048+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Spark/Spark_2k.log"
+2023-11-09T09:21:51.9645749+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 116.2µs.
+2023-11-09T09:21:51.9657991+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.0689ms.
+2023-11-09T09:21:51.9777707+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 11.8284ms.
+2023-11-09T09:21:51.9781434+08:00 [INFO] Spark: 36 templates found.
+2023-11-09T09:21:51.98699+08:00 [INFO] Spark: Group Accuracy 1
+2023-11-09T09:21:51.9880636+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Thunderbird/Thunderbird_2k.log"
+2023-11-09T09:21:51.9885407+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 139.1µs.
+2023-11-09T09:21:51.9901035+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.4393ms.
+2023-11-09T09:21:52.0004431+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 10.1967ms.
+2023-11-09T09:21:52.0008291+08:00 [INFO] Thunderbird: 196 templates found.
+2023-11-09T09:21:52.0112213+08:00 [INFO] Thunderbird: Group Accuracy 0.9655
+2023-11-09T09:21:52.0124907+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Windows/Windows_2k.log"
+2023-11-09T09:21:52.013072+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 153.2µs.
+2023-11-09T09:21:52.0145493+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.3469ms.
+2023-11-09T09:21:52.0296089+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 14.9038ms.
+2023-11-09T09:21:52.029977+08:00 [INFO] Windows: 57 templates found.
+2023-11-09T09:21:52.0392326+08:00 [INFO] Windows: Group Accuracy 0.996
+2023-11-09T09:21:52.0401935+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Zookeeper/Zookeeper_2k.log"
+2023-11-09T09:21:52.04065+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 128.6µs.
+2023-11-09T09:21:52.0420121+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.2334ms.
+2023-11-09T09:21:52.0510769+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.9196ms.
+2023-11-09T09:21:52.0514191+08:00 [INFO] Zookeeper: 55 templates found.
+2023-11-09T09:21:52.0610732+08:00 [INFO] Zookeeper: Group Accuracy 0.9945
+2023-11-09T09:23:30.7276312+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Android/Android_2k.log"
+2023-11-09T09:23:30.7282781+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 135.5µs.
+2023-11-09T09:23:30.7296647+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.2639ms.
+2023-11-09T09:23:30.9639347+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 234.1263ms.
+2023-11-09T09:23:30.9642824+08:00 [INFO] Android: 173 templates found.
+2023-11-09T09:23:30.9748609+08:00 [INFO] Android: Group Accuracy 0.8195
+2023-11-09T09:23:30.976728+08:00 [DEBUG] (1) rustlog::evaluator: "E78", {101: 3, 171: 1}, 4
+2023-11-09T09:23:30.9770212+08:00 [DEBUG] (1) rustlog::evaluator: "E155", {8: 52, 51: 13}, 65
+2023-11-09T09:23:30.9771695+08:00 [DEBUG] (1) rustlog::evaluator: "E10", {1: 1, 25: 25}, 26
+2023-11-09T09:23:30.9773093+08:00 [DEBUG] (1) rustlog::evaluator: "E47", {57: 1, 84: 1}, 2
+2023-11-09T09:23:30.9774711+08:00 [DEBUG] (1) rustlog::evaluator: "E41", {16: 1, 55: 20, 15: 1, 139: 3}, 25
+2023-11-09T09:23:30.9777318+08:00 [DEBUG] (1) rustlog::evaluator: "E128", {151: 4, 27: 33}, 37
+2023-11-09T09:23:30.9779162+08:00 [DEBUG] (1) rustlog::evaluator: "E68", {37: 7, 34: 7}, 14
+2023-11-09T09:23:30.9781193+08:00 [DEBUG] (1) rustlog::evaluator: "E157", {9: 52, 52: 13}, 65
+2023-11-09T09:23:30.9782909+08:00 [DEBUG] (1) rustlog::evaluator: "E18", {140: 5, 88: 1, 74: 2}, 8
+2023-11-09T09:23:30.9785062+08:00 [DEBUG] (1) rustlog::evaluator: "E108", {7: 1, 11: 25}, 26
+2023-11-09T09:23:30.9786569+08:00 [DEBUG] (1) rustlog::evaluator: "E131", {3: 2, 40: 2}, 4
+2023-11-09T09:23:30.9788227+08:00 [DEBUG] (1) rustlog::evaluator: "E21", {172: 1, 32: 84}, 85
+2023-11-09T09:23:30.9803722+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Apache/Apache_2k.log"
+2023-11-09T09:23:30.9807578+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 86.8µs.
+2023-11-09T09:23:30.9816756+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 799µs.
+2023-11-09T09:23:30.9903358+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 8.5268ms.
+2023-11-09T09:23:30.9906263+08:00 [INFO] Apache: 12 templates found.
+2023-11-09T09:23:30.9987334+08:00 [INFO] Apache: Group Accuracy 0
+2023-11-09T09:23:31.0005343+08:00 [DEBUG] (1) rustlog::evaluator: "E1", {7: 394, 2: 442}, 836
+2023-11-09T09:23:31.0007607+08:00 [DEBUG] (1) rustlog::evaluator: "E4", {3: 18, 6: 14}, 32
+2023-11-09T09:23:31.0011218+08:00 [DEBUG] (1) rustlog::evaluator: "E2", {0: 298, 8: 271}, 569
+2023-11-09T09:23:31.001467+08:00 [DEBUG] (1) rustlog::evaluator: "E3", {1: 281, 9: 258}, 539
+2023-11-09T09:23:31.0016541+08:00 [DEBUG] (1) rustlog::evaluator: "E5", {4: 6, 10: 6}, 12
+2023-11-09T09:23:31.0018114+08:00 [DEBUG] (1) rustlog::evaluator: "E6", {5: 6, 11: 6}, 12
+2023-11-09T09:23:31.0266472+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/BGL/BGL_2k.log"
+2023-11-09T09:23:31.0270808+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 88.5µs.
+2023-11-09T09:23:31.0287297+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.5253ms.
+2023-11-09T09:23:31.1235937+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 94.7185ms.
+2023-11-09T09:23:31.1239319+08:00 [INFO] BGL: 160 templates found.
+2023-11-09T09:23:31.1340121+08:00 [INFO] BGL: Group Accuracy 0.9175
+2023-11-09T09:23:31.1358344+08:00 [DEBUG] (1) rustlog::evaluator: "E39", {94: 1, 67: 1}, 2
+2023-11-09T09:23:31.1360043+08:00 [DEBUG] (1) rustlog::evaluator: "E73", {89: 1, 108: 1, 86: 1, 65: 1, 87: 1}, 5
+2023-11-09T09:23:31.1361951+08:00 [DEBUG] (1) rustlog::evaluator: "E88", {78: 1, 77: 1, 83: 1}, 3
+2023-11-09T09:23:31.1364138+08:00 [DEBUG] (1) rustlog::evaluator: "E15", {26: 1, 58: 4}, 5
+2023-11-09T09:23:31.1365765+08:00 [DEBUG] (1) rustlog::evaluator: "E34", {129: 1, 96: 5, 100: 1, 97: 9, 116: 13, 115: 1}, 30
+2023-11-09T09:23:31.1367711+08:00 [DEBUG] (1) rustlog::evaluator: "E76", {61: 1, 12: 20}, 21
+2023-11-09T09:23:31.1369114+08:00 [DEBUG] (1) rustlog::evaluator: "E61", {16: 5, 62: 1}, 6
+2023-11-09T09:23:31.1370636+08:00 [DEBUG] (1) rustlog::evaluator: "E28", {106: 1, 111: 1, 113: 1, 49: 1, 119: 1, 123: 1, 52: 4, 114: 1, 128: 2, 153: 2, 51: 1, 109: 1, 71: 1, 110: 3}, 21
+2023-11-09T09:23:31.137347+08:00 [DEBUG] (1) rustlog::evaluator: "E54", {23: 3, 57: 2}, 5
+2023-11-09T09:23:31.1374905+08:00 [DEBUG] (1) rustlog::evaluator: "E53", {56: 3, 17: 2}, 5
+2023-11-09T09:23:31.1376448+08:00 [DEBUG] (1) rustlog::evaluator: "E25", {122: 2, 92: 15}, 17
+2023-11-09T09:23:31.1377886+08:00 [DEBUG] (1) rustlog::evaluator: "E103", {18: 3, 55: 2}, 5
+2023-11-09T09:23:31.1379384+08:00 [DEBUG] (1) rustlog::evaluator: "E26", {130: 2, 127: 1, 126: 2, 118: 13, 155: 1}, 19
+2023-11-09T09:23:31.1381149+08:00 [DEBUG] (1) rustlog::evaluator: "E102", {20: 3, 60: 2}, 5
+2023-11-09T09:23:31.1382548+08:00 [DEBUG] (1) rustlog::evaluator: "E105", {59: 1, 29: 1}, 2
+2023-11-09T09:23:31.1383975+08:00 [DEBUG] (1) rustlog::evaluator: "E17", {66: 4, 82: 2}, 6
+2023-11-09T09:23:31.138752+08:00 [DEBUG] (1) rustlog::evaluator: "E101", {54: 3, 15: 5}, 8
+2023-11-09T09:23:31.1533246+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Hadoop/Hadoop_2k.log"
+2023-11-09T09:23:31.1538525+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 170.5µs.
+2023-11-09T09:23:31.1556992+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.6784ms.
+2023-11-09T09:23:31.1909751+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 35.1331ms.
+2023-11-09T09:23:31.1912512+08:00 [INFO] Hadoop: 127 templates found.
+2023-11-09T09:23:31.2014186+08:00 [INFO] Hadoop: Group Accuracy 0.7275
+2023-11-09T09:23:31.2033811+08:00 [DEBUG] (1) rustlog::evaluator: 59, {"E65": 1, "E87": 1}, 2
+2023-11-09T09:23:31.2038127+08:00 [DEBUG] (1) rustlog::evaluator: "E89", {6: 2, 9: 1, 10: 1, 11: 1, 7: 1, 15: 1, 8: 1, 12: 1}, 9
+2023-11-09T09:23:31.2041192+08:00 [DEBUG] (1) rustlog::evaluator: "E90", {56: 36, 66: 3}, 39
+2023-11-09T09:23:31.2042639+08:00 [DEBUG] (1) rustlog::evaluator: "E35", {115: 2, 116: 2}, 4
+2023-11-09T09:23:31.2045929+08:00 [DEBUG] (1) rustlog::evaluator: "E8", {37: 1, 36: 1}, 2
+2023-11-09T09:23:31.204933+08:00 [DEBUG] (1) rustlog::evaluator: "E10", {112: 146, 104: 327, 120: 2, 109: 1}, 476
+2023-11-09T09:23:31.2051233+08:00 [DEBUG] (1) rustlog::evaluator: "E77", {75: 10, 92: 3}, 13
+2023-11-09T09:23:31.206644+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HDFS/HDFS_2k.log"
+2023-11-09T09:23:31.207052+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 120µs.
+2023-11-09T09:23:31.2084616+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.2961ms.
+2023-11-09T09:23:31.2178258+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.2238ms.
+2023-11-09T09:23:31.2181852+08:00 [INFO] HDFS: 14 templates found.
+2023-11-09T09:23:31.2273428+08:00 [INFO] HDFS: Group Accuracy 1
+2023-11-09T09:23:31.23975+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HealthApp/HealthApp_2k.log"
+2023-11-09T09:23:31.240265+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 142.3µs.
+2023-11-09T09:23:31.241244+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 857.3µs.
+2023-11-09T09:23:31.2873906+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 46.0044ms.
+2023-11-09T09:23:31.2877136+08:00 [INFO] HealthApp: 75 templates found.
+2023-11-09T09:23:31.2962622+08:00 [INFO] HealthApp: Group Accuracy 1
+2023-11-09T09:23:31.2996135+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/HPC/HPC_2k.log"
+2023-11-09T09:23:31.2999834+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 79.2µs.
+2023-11-09T09:23:31.3008357+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 733.2µs.
+2023-11-09T09:23:31.3085091+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 7.5362ms.
+2023-11-09T09:23:31.3087813+08:00 [INFO] HPC: 57 templates found.
+2023-11-09T09:23:31.3173336+08:00 [INFO] HPC: Group Accuracy 0.804
+2023-11-09T09:23:31.3188232+08:00 [DEBUG] (1) rustlog::evaluator: 56, {"E29": 45, "E28": 44, "E30": 2}, 91
+2023-11-09T09:23:31.319279+08:00 [DEBUG] (1) rustlog::evaluator: "E38", {36: 133, 31: 29}, 162
+2023-11-09T09:23:31.3195027+08:00 [DEBUG] (1) rustlog::evaluator: "E32", {34: 3, 33: 57}, 60
+2023-11-09T09:23:31.3196774+08:00 [DEBUG] (1) rustlog::evaluator: "E24", {50: 7, 21: 2}, 9
+2023-11-09T09:23:31.3198267+08:00 [DEBUG] (1) rustlog::evaluator: "E9", {30: 1, 27: 29, 28: 2, 29: 1, 25: 1, 26: 2}, 36
+2023-11-09T09:23:31.320022+08:00 [DEBUG] (1) rustlog::evaluator: "E43", {9: 1, 10: 3}, 4
+2023-11-09T09:23:31.3202394+08:00 [DEBUG] (1) rustlog::evaluator: "E21", {49: 4, 20: 9}, 13
+2023-11-09T09:23:31.3204176+08:00 [DEBUG] (1) rustlog::evaluator: "E25", {22: 1, 48: 12}, 13
+2023-11-09T09:23:31.3207393+08:00 [DEBUG] (1) rustlog::evaluator: "E20", {43: 1, 37: 2, 40: 1}, 4
+2023-11-09T09:23:31.3509876+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Linux/Linux_2k.log"
+2023-11-09T09:23:31.3514088+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 66.5µs.
+2023-11-09T09:23:31.3525462+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.0163ms.
+2023-11-09T09:23:31.4108461+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 58.1593ms.
+2023-11-09T09:23:31.4111438+08:00 [INFO] Linux: 150 templates found.
+2023-11-09T09:23:31.4203609+08:00 [INFO] Linux: Group Accuracy 0.0885
+2023-11-09T09:23:31.4217255+08:00 [DEBUG] (1) rustlog::evaluator: 18, {"E18": 51, "E19": 4}, 55
+2023-11-09T09:23:31.422206+08:00 [DEBUG] (1) rustlog::evaluator: 49, {"E16": 15, "E15": 1}, 16
+2023-11-09T09:23:31.422419+08:00 [DEBUG] (1) rustlog::evaluator: 2, {"E18": 104, "E17": 17}, 121
+2023-11-09T09:23:31.4228915+08:00 [DEBUG] (1) rustlog::evaluator: "E29", {12: 12, 60: 1, 28: 46, 39: 87, 59: 23, 31: 23, 29: 23, 51: 68, 52: 23, 7: 46, 38: 31, 54: 23, 14: 76, 30: 23, 40: 290, 6: 28, 22: 23, 53: 63}, 909
+2023-11-09T09:23:31.4232415+08:00 [DEBUG] (1) rustlog::evaluator: "E37", {9: 2, 43: 3, 25: 1}, 6
+2023-11-09T09:23:31.4234343+08:00 [DEBUG] (1) rustlog::evaluator: "E16", {49: 15, 24: 19, 0: 83}, 117
+2023-11-09T09:23:31.4236214+08:00 [DEBUG] (1) rustlog::evaluator: "E101", {20: 41, 4: 43, 42: 39}, 123
+2023-11-09T09:23:31.4237927+08:00 [DEBUG] (1) rustlog::evaluator: "E8", {46: 18, 21: 9, 5: 16}, 43
+2023-11-09T09:23:31.4239564+08:00 [DEBUG] (1) rustlog::evaluator: "E90", {11: 2, 27: 1, 45: 4}, 7
+2023-11-09T09:23:31.4241554+08:00 [DEBUG] (1) rustlog::evaluator: "E102", {19: 40, 41: 39, 3: 43}, 122
+2023-11-09T09:23:31.4243939+08:00 [DEBUG] (1) rustlog::evaluator: "E18", {47: 196, 2: 104, 18: 51}, 351
+2023-11-09T09:23:31.4245837+08:00 [DEBUG] (1) rustlog::evaluator: "E27", {1: 82, 23: 19, 48: 16}, 117
+2023-11-09T09:23:31.4247452+08:00 [DEBUG] (1) rustlog::evaluator: "E38", {10: 2, 26: 1, 44: 3}, 6
+2023-11-09T09:23:31.4535689+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Mac/Mac_2k.log"
+2023-11-09T09:23:31.4539903+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 82.5µs.
+2023-11-09T09:23:31.4555265+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.4165ms.
+2023-11-09T09:23:31.5474471+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 91.7799ms.
+2023-11-09T09:23:31.5477889+08:00 [INFO] Mac: 473 templates found.
+2023-11-09T09:23:31.5594442+08:00 [INFO] Mac: Group Accuracy 0.2845
+2023-11-09T09:23:31.5610482+08:00 [DEBUG] (1) rustlog::evaluator: 28, {"E111": 1, "E112": 4}, 5
+2023-11-09T09:23:31.561515+08:00 [DEBUG] (1) rustlog::evaluator: 97, {"E319": 7, "E320": 1}, 8
+2023-11-09T09:23:31.5620116+08:00 [DEBUG] (1) rustlog::evaluator: "E149", {7: 5, 188: 1}, 6
+2023-11-09T09:23:31.5621549+08:00 [DEBUG] (1) rustlog::evaluator: "E312", {284: 1, 166: 4}, 5
+2023-11-09T09:23:31.5622954+08:00 [DEBUG] (1) rustlog::evaluator: "E227", {378: 1, 202: 1}, 2
+2023-11-09T09:23:31.5624722+08:00 [DEBUG] (1) rustlog::evaluator: "E189", {15: 161, 78: 5}, 166
+2023-11-09T09:23:31.5626142+08:00 [DEBUG] (1) rustlog::evaluator: "E296", {81: 10, 187: 1}, 11
+2023-11-09T09:23:31.5627544+08:00 [DEBUG] (1) rustlog::evaluator: "E265", {404: 1, 289: 1, 242: 1}, 3
+2023-11-09T09:23:31.5629084+08:00 [DEBUG] (1) rustlog::evaluator: "E159", {377: 1, 279: 1}, 2
+2023-11-09T09:23:31.56305+08:00 [DEBUG] (1) rustlog::evaluator: "E176", {235: 3, 246: 6}, 9
+2023-11-09T09:23:31.5631961+08:00 [DEBUG] (1) rustlog::evaluator: "E64", {69: 1, 50: 7}, 8
+2023-11-09T09:23:31.5633441+08:00 [DEBUG] (1) rustlog::evaluator: "E142", {143: 8, 158: 4, 27: 16}, 28
+2023-11-09T09:23:31.5634957+08:00 [DEBUG] (1) rustlog::evaluator: "E261", {34: 1, 186: 1, 265: 1}, 3
+2023-11-09T09:23:31.5636473+08:00 [DEBUG] (1) rustlog::evaluator: "E263", {39: 2, 456: 1}, 3
+2023-11-09T09:23:31.5637979+08:00 [DEBUG] (1) rustlog::evaluator: "E44", {64: 10, 137: 7}, 17
+2023-11-09T09:23:31.5639415+08:00 [DEBUG] (1) rustlog::evaluator: "E271", {103: 15, 184: 2}, 17
+2023-11-09T09:23:31.5641354+08:00 [DEBUG] (1) rustlog::evaluator: "E153", {161: 1, 125: 8}, 9
+2023-11-09T09:23:31.5642798+08:00 [DEBUG] (1) rustlog::evaluator: "E146", {41: 5, 175: 3}, 8
+2023-11-09T09:23:31.564421+08:00 [DEBUG] (1) rustlog::evaluator: "E155", {253: 3, 379: 1}, 4
+2023-11-09T09:23:31.5645639+08:00 [DEBUG] (1) rustlog::evaluator: "E16", {210: 3, 130: 1}, 4
+2023-11-09T09:23:31.5647116+08:00 [DEBUG] (1) rustlog::evaluator: "E130", {44: 6, 277: 1}, 7
+2023-11-09T09:23:31.5648622+08:00 [DEBUG] (1) rustlog::evaluator: "E252", {0: 32, 157: 4}, 36
+2023-11-09T09:23:31.5650114+08:00 [DEBUG] (1) rustlog::evaluator: "E61", {214: 2, 23: 9}, 11
+2023-11-09T09:23:31.565154+08:00 [DEBUG] (1) rustlog::evaluator: "E134", {169: 2, 115: 4}, 6
+2023-11-09T09:23:31.5653022+08:00 [DEBUG] (1) rustlog::evaluator: "E17", {147: 7, 208: 4}, 11
+2023-11-09T09:23:31.5654483+08:00 [DEBUG] (1) rustlog::evaluator: "E140", {193: 2, 12: 7}, 9
+2023-11-09T09:23:31.5655922+08:00 [DEBUG] (1) rustlog::evaluator: "E19", {211: 4, 131: 1}, 5
+2023-11-09T09:23:31.5657428+08:00 [DEBUG] (1) rustlog::evaluator: "E293", {104: 12, 180: 3}, 15
+2023-11-09T09:23:31.565886+08:00 [DEBUG] (1) rustlog::evaluator: "E319", {97: 7, 165: 1}, 8
+2023-11-09T09:23:31.5660294+08:00 [DEBUG] (1) rustlog::evaluator: "E33", {74: 3, 297: 5}, 8
+2023-11-09T09:23:31.5661726+08:00 [DEBUG] (1) rustlog::evaluator: "E138", {136: 1, 311: 2}, 3
+2023-11-09T09:23:31.5663148+08:00 [DEBUG] (1) rustlog::evaluator: "E151", {457: 1, 243: 5}, 6
+2023-11-09T09:23:31.5664588+08:00 [DEBUG] (1) rustlog::evaluator: "E144", {55: 9, 179: 2}, 11
+2023-11-09T09:23:31.5666051+08:00 [DEBUG] (1) rustlog::evaluator: "E202", {90: 12, 322: 1}, 13
+2023-11-09T09:23:31.5667499+08:00 [DEBUG] (1) rustlog::evaluator: "E124", {60: 12, 4: 4}, 16
+2023-11-09T09:23:31.5668981+08:00 [DEBUG] (1) rustlog::evaluator: "E122", {162: 4, 33: 18}, 22
+2023-11-09T09:23:31.5670396+08:00 [DEBUG] (1) rustlog::evaluator: "E13", {17: 2, 358: 1}, 3
+2023-11-09T09:23:31.5671839+08:00 [DEBUG] (1) rustlog::evaluator: "E131", {85: 4, 8: 5}, 9
+2023-11-09T09:23:31.5673266+08:00 [DEBUG] (1) rustlog::evaluator: "E109", {160: 1, 19: 6}, 7
+2023-11-09T09:23:31.5674707+08:00 [DEBUG] (1) rustlog::evaluator: "E125", {30: 7, 182: 5}, 12
+2023-11-09T09:23:31.5676179+08:00 [DEBUG] (1) rustlog::evaluator: "E177", {238: 1, 298: 2}, 3
+2023-11-09T09:23:31.5677627+08:00 [DEBUG] (1) rustlog::evaluator: "E329", {433: 1, 466: 1}, 2
+2023-11-09T09:23:31.567905+08:00 [DEBUG] (1) rustlog::evaluator: "E75", {411: 4, 141: 5}, 9
+2023-11-09T09:23:31.5680592+08:00 [DEBUG] (1) rustlog::evaluator: "E299", {442: 1, 152: 3}, 4
+2023-11-09T09:23:31.5682029+08:00 [DEBUG] (1) rustlog::evaluator: "E139", {192: 1, 135: 8}, 9
+2023-11-09T09:23:31.5683441+08:00 [DEBUG] (1) rustlog::evaluator: "E99", {321: 1, 230: 1, 239: 1}, 3
+2023-11-09T09:23:31.5684981+08:00 [DEBUG] (1) rustlog::evaluator: "E314", {439: 1, 121: 3}, 4
+2023-11-09T09:23:31.5686395+08:00 [DEBUG] (1) rustlog::evaluator: "E204", {247: 3, 392: 1, 343: 2}, 6
+2023-11-09T09:23:31.5687941+08:00 [DEBUG] (1) rustlog::evaluator: "E49", {223: 8, 59: 2}, 10
+2023-11-09T09:23:31.5689355+08:00 [DEBUG] (1) rustlog::evaluator: "E331", {70: 6, 300: 6}, 12
+2023-11-09T09:23:31.569088+08:00 [DEBUG] (1) rustlog::evaluator: "E305", {99: 25, 391: 1}, 26
+2023-11-09T09:23:31.5692329+08:00 [DEBUG] (1) rustlog::evaluator: "E167", {216: 3, 241: 14}, 17
+2023-11-09T09:23:31.5693733+08:00 [DEBUG] (1) rustlog::evaluator: "E111", {31: 8, 28: 1}, 9
+2023-11-09T09:23:31.5695216+08:00 [DEBUG] (1) rustlog::evaluator: "E208", {171: 3, 43: 17}, 20
+2023-11-09T09:23:31.5696728+08:00 [DEBUG] (1) rustlog::evaluator: "E120", {13: 38, 32: 18}, 56
+2023-11-09T09:23:31.5698218+08:00 [DEBUG] (1) rustlog::evaluator: "E280", {309: 1, 385: 1, 212: 1}, 3
+2023-11-09T09:23:31.5699914+08:00 [DEBUG] (1) rustlog::evaluator: "E311", {14: 4, 359: 2, 432: 1}, 7
+2023-11-09T09:23:31.5701516+08:00 [DEBUG] (1) rustlog::evaluator: "E121", {40: 7, 80: 13}, 20
+2023-11-09T09:23:31.5702937+08:00 [DEBUG] (1) rustlog::evaluator: "E250", {310: 2, 198: 1}, 3
+2023-11-09T09:23:31.5704368+08:00 [DEBUG] (1) rustlog::evaluator: "E65", {320: 1, 197: 1}, 2
+2023-11-09T09:23:31.5705929+08:00 [DEBUG] (1) rustlog::evaluator: "E137", {412: 1, 344: 1}, 2
+2023-11-09T09:23:31.5707392+08:00 [DEBUG] (1) rustlog::evaluator: "E58", {18: 13, 10: 2}, 15
+2023-11-09T09:23:31.5708792+08:00 [DEBUG] (1) rustlog::evaluator: "E310", {140: 4, 61: 3}, 7
+2023-11-09T09:23:31.5710213+08:00 [DEBUG] (1) rustlog::evaluator: "E129", {150: 6, 351: 1}, 7
+2023-11-09T09:23:31.5711702+08:00 [DEBUG] (1) rustlog::evaluator: "E203", {76: 38, 153: 6}, 44
+2023-11-09T09:23:31.5713099+08:00 [DEBUG] (1) rustlog::evaluator: "E301", {73: 1, 353: 3}, 4
+2023-11-09T09:23:31.5714516+08:00 [DEBUG] (1) rustlog::evaluator: "E270", {213: 1, 312: 3}, 4
+2023-11-09T09:23:31.571603+08:00 [DEBUG] (1) rustlog::evaluator: "E52", {26: 22, 177: 7}, 29
+2023-11-09T09:23:31.5717454+08:00 [DEBUG] (1) rustlog::evaluator: "E48", {183: 4, 42: 10}, 14
+2023-11-09T09:23:31.5718876+08:00 [DEBUG] (1) rustlog::evaluator: "E171", {234: 2, 45: 13}, 15
+2023-11-09T09:23:31.5720274+08:00 [DEBUG] (1) rustlog::evaluator: "E60", {63: 3, 227: 3}, 6
+2023-11-09T09:23:31.5721714+08:00 [DEBUG] (1) rustlog::evaluator: "E69", {402: 1, 195: 1}, 2
+2023-11-09T09:23:31.5723172+08:00 [DEBUG] (1) rustlog::evaluator: "E127", {218: 10, 231: 2}, 12
+2023-11-09T09:23:31.5724655+08:00 [DEBUG] (1) rustlog::evaluator: "E166", {431: 1, 460: 1}, 2
+2023-11-09T09:23:31.5726083+08:00 [DEBUG] (1) rustlog::evaluator: "E119", {191: 5, 264: 10}, 15
+2023-11-09T09:23:31.5727547+08:00 [DEBUG] (1) rustlog::evaluator: "E133", {276: 1, 225: 7}, 8
+2023-11-09T09:23:31.5728951+08:00 [DEBUG] (1) rustlog::evaluator: "E267", {107: 3, 138: 4}, 7
+2023-11-09T09:23:31.5730433+08:00 [DEBUG] (1) rustlog::evaluator: "E313", {163: 1, 48: 11}, 12
+2023-11-09T09:23:31.5731819+08:00 [DEBUG] (1) rustlog::evaluator: "E246", {408: 1, 261: 1}, 2
+2023-11-09T09:23:31.5733881+08:00 [DEBUG] (1) rustlog::evaluator: "E172", {222: 10, 240: 21}, 31
+2023-11-09T09:23:31.5735383+08:00 [DEBUG] (1) rustlog::evaluator: "E55", {35: 7, 189: 4}, 11
+2023-11-09T09:23:31.5736823+08:00 [DEBUG] (1) rustlog::evaluator: "E258", {82: 16, 156: 1}, 17
+2023-11-09T09:23:31.5738447+08:00 [DEBUG] (1) rustlog::evaluator: "E1", {287: 8, 167: 2}, 10
+2023-11-09T09:23:31.573991+08:00 [DEBUG] (1) rustlog::evaluator: "E67", {199: 1, 117: 1}, 2
+2023-11-09T09:23:31.5741404+08:00 [DEBUG] (1) rustlog::evaluator: "E12", {155: 7, 281: 16}, 23
+2023-11-09T09:23:31.5742868+08:00 [DEBUG] (1) rustlog::evaluator: "E143", {405: 1, 21: 1, 461: 1, 440: 1}, 4
+2023-11-09T09:23:31.5744567+08:00 [DEBUG] (1) rustlog::evaluator: "E210", {458: 1, 217: 3}, 4
+2023-11-09T09:23:31.5745997+08:00 [DEBUG] (1) rustlog::evaluator: "E31", {403: 2, 418: 1}, 3
+2023-11-09T09:23:31.5747462+08:00 [DEBUG] (1) rustlog::evaluator: "E90", {127: 1, 374: 1}, 2
+2023-11-09T09:23:31.5748905+08:00 [DEBUG] (1) rustlog::evaluator: "E276", {22: 4, 112: 11}, 15
+2023-11-09T09:23:31.5750361+08:00 [DEBUG] (1) rustlog::evaluator: "E128", {3: 11, 194: 1}, 12
+2023-11-09T09:23:31.5751769+08:00 [DEBUG] (1) rustlog::evaluator: "E184", {307: 2, 441: 1}, 3
+2023-11-09T09:23:31.5753265+08:00 [DEBUG] (1) rustlog::evaluator: "E56", {37: 4, 58: 6}, 10
+2023-11-09T09:23:31.5754685+08:00 [DEBUG] (1) rustlog::evaluator: "E51", {86: 2, 124: 4}, 6
+2023-11-09T09:23:31.5756109+08:00 [DEBUG] (1) rustlog::evaluator: "E132", {288: 1, 201: 1}, 2
+2023-11-09T09:23:31.5757574+08:00 [DEBUG] (1) rustlog::evaluator: "E328", {47: 7, 323: 1}, 8
+2023-11-09T09:23:31.5759126+08:00 [DEBUG] (1) rustlog::evaluator: "E207", {110: 5, 269: 3, 341: 3, 360: 1, 406: 1, 75: 1, 142: 2}, 16
+2023-11-09T09:23:31.5761264+08:00 [DEBUG] (1) rustlog::evaluator: "E173", {236: 4, 25: 18}, 22
+2023-11-09T09:23:31.576273+08:00 [DEBUG] (1) rustlog::evaluator: "E157", {116: 10, 164: 1}, 11
+2023-11-09T09:23:31.5764202+08:00 [DEBUG] (1) rustlog::evaluator: "E118", {369: 1, 387: 1}, 2
+2023-11-09T09:23:31.5765644+08:00 [DEBUG] (1) rustlog::evaluator: "E335", {170: 1, 244: 1}, 2
+2023-11-09T09:23:31.5767148+08:00 [DEBUG] (1) rustlog::evaluator: "E323", {1: 33, 173: 6}, 39
+2023-11-09T09:23:31.5768668+08:00 [DEBUG] (1) rustlog::evaluator: "E259", {54: 18, 185: 2}, 20
+2023-11-09T09:23:31.5770215+08:00 [DEBUG] (1) rustlog::evaluator: "E148", {84: 6, 174: 2}, 8
+2023-11-09T09:23:31.577171+08:00 [DEBUG] (1) rustlog::evaluator: "E288", {200: 2, 20: 7}, 9
+2023-11-09T09:23:31.5773171+08:00 [DEBUG] (1) rustlog::evaluator: "E161", {51: 16, 190: 4}, 20
+2023-11-09T09:23:31.5774619+08:00 [DEBUG] (1) rustlog::evaluator: "E294", {233: 3, 151: 12}, 15
+2023-11-09T09:23:31.5776054+08:00 [DEBUG] (1) rustlog::evaluator: "E150", {36: 7, 196: 3}, 10
+2023-11-09T09:23:31.5777509+08:00 [DEBUG] (1) rustlog::evaluator: "E174", {224: 18, 237: 3}, 21
+2023-11-09T09:23:31.5778987+08:00 [DEBUG] (1) rustlog::evaluator: "E300", {29: 27, 154: 2}, 29
+2023-11-09T09:23:31.5780506+08:00 [DEBUG] (1) rustlog::evaluator: "E50", {9: 13, 11: 3}, 16
+2023-11-09T09:23:31.5781952+08:00 [DEBUG] (1) rustlog::evaluator: "E57", {106: 12, 159: 3}, 15
+2023-11-09T09:23:31.5783418+08:00 [DEBUG] (1) rustlog::evaluator: "E59", {46: 8, 57: 6}, 14
+2023-11-09T09:23:31.5784853+08:00 [DEBUG] (1) rustlog::evaluator: "E190", {328: 1, 168: 1}, 2
+2023-11-09T09:23:31.5786293+08:00 [DEBUG] (1) rustlog::evaluator: "E206", {83: 2, 291: 1, 272: 1, 362: 1}, 5
+2023-11-09T09:23:31.5788002+08:00 [DEBUG] (1) rustlog::evaluator: "E216", {205: 2, 2: 15}, 17
+2023-11-09T09:23:31.5789464+08:00 [DEBUG] (1) rustlog::evaluator: "E154", {255: 2, 372: 1}, 3
+2023-11-09T09:23:31.5790897+08:00 [DEBUG] (1) rustlog::evaluator: "E70", {306: 5, 172: 2}, 7
+2023-11-09T09:23:31.5792322+08:00 [DEBUG] (1) rustlog::evaluator: "E287", {376: 1, 308: 2}, 3
+2023-11-09T09:23:31.5793737+08:00 [DEBUG] (1) rustlog::evaluator: "E242", {203: 1, 465: 1}, 2
+2023-11-09T09:23:31.5918858+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenSSH/OpenSSH_2k.log"
+2023-11-09T09:23:31.5923906+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 116.6µs.
+2023-11-09T09:23:31.5935303+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.0183ms.
+2023-11-09T09:23:31.6444181+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 50.746ms.
+2023-11-09T09:23:31.6447096+08:00 [INFO] OpenSSH: 26 templates found.
+2023-11-09T09:23:31.6535568+08:00 [INFO] OpenSSH: Group Accuracy 1
+2023-11-09T09:23:31.6645552+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/OpenStack/OpenStack_2k.log"
+2023-11-09T09:23:31.6651202+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 240.2µs.
+2023-11-09T09:23:31.6680822+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 2.8347ms.
+2023-11-09T09:23:31.6941103+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 25.8388ms.
+2023-11-09T09:23:31.6944805+08:00 [INFO] OpenStack: 51 templates found.
+2023-11-09T09:23:31.7065755+08:00 [INFO] OpenStack: Group Accuracy 0.513
+2023-11-09T09:23:31.7086932+08:00 [DEBUG] (1) rustlog::evaluator: "E7", {50: 1, 3: 42}, 43
+2023-11-09T09:23:31.7091037+08:00 [DEBUG] (1) rustlog::evaluator: "E25", {41: 28, 47: 2, 17: 73, 42: 30, 43: 13, 44: 16, 0: 721, 18: 48}, 931
+2023-11-09T09:23:31.7114075+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Proxifier/Proxifier_2k.log"
+2023-11-09T09:23:31.7118248+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 100.5µs.
+2023-11-09T09:23:31.7131148+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.1628ms.
+2023-11-09T09:23:31.7285613+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.2925ms.
+2023-11-09T09:23:31.7289185+08:00 [INFO] Proxifier: 100 templates found.
+2023-11-09T09:23:31.7380097+08:00 [INFO] Proxifier: Group Accuracy 0
+2023-11-09T09:23:31.7399294+08:00 [DEBUG] (1) rustlog::evaluator: "E4", {91: 14, 92: 12}, 26
+2023-11-09T09:23:31.7403045+08:00 [DEBUG] (1) rustlog::evaluator: "E2", {89: 1, 94: 11, 62: 14, 31: 4, 23: 6, 34: 16, 67: 1, 16: 32, 26: 16, 41: 8, 39: 15, 0: 750, 35: 5, 79: 2, 84: 2, 51: 2, 14: 31, 21: 22, 24: 1, 93: 2, 66: 1, 74: 12}, 954
+2023-11-09T09:23:31.740684+08:00 [DEBUG] (1) rustlog::evaluator: "E1", {13: 1, 65: 1}, 2
+2023-11-09T09:23:31.7410443+08:00 [DEBUG] (1) rustlog::evaluator: "E8", {22: 1, 15: 15, 58: 8, 83: 1, 11: 4, 44: 3, 75: 1, 97: 1, 99: 1, 20: 1, 30: 2, 43: 5, 29: 6, 53: 3, 46: 1, 48: 2, 52: 4, 1: 195, 56: 11, 45: 1, 28: 5, 36: 7, 64: 13, 10: 21, 76: 3, 32: 1, 6: 96, 27: 2, 12: 18, 77: 2, 8: 25, 17: 6, 4: 231, 37: 3, 55: 20, 42: 1, 60: 2, 78: 1, 81: 2, 2: 52, 3: 25, 85: 1, 95: 4, 96: 6, 9: 3, 7: 88, 25: 1, 5: 30, 63: 2, 82: 1, 49: 2, 90: 2, 40: 2, 57: 1, 72: 2}, 947
+2023-11-09T09:23:31.7418095+08:00 [DEBUG] (1) rustlog::evaluator: "E3", {69: 12, 70: 2, 68: 5, 73: 1}, 20
+2023-11-09T09:23:31.7419789+08:00 [DEBUG] (1) rustlog::evaluator: "E7", {18: 1, 88: 1, 33: 24, 54: 5}, 31
+2023-11-09T09:23:31.7421407+08:00 [DEBUG] (1) rustlog::evaluator: "E6", {19: 1, 47: 1, 87: 1}, 3
+2023-11-09T09:23:31.7422972+08:00 [DEBUG] (1) rustlog::evaluator: "E5", {98: 1, 61: 6, 38: 1, 50: 2, 71: 1, 86: 3, 80: 2, 59: 1}, 17
+2023-11-09T09:23:31.7468642+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Spark/Spark_2k.log"
+2023-11-09T09:23:31.7473426+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 154.9µs.
+2023-11-09T09:23:31.7483781+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 915.4µs.
+2023-11-09T09:23:31.7612412+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 12.7205ms.
+2023-11-09T09:23:31.7615447+08:00 [INFO] Spark: 36 templates found.
+2023-11-09T09:23:31.7702287+08:00 [INFO] Spark: Group Accuracy 1
+2023-11-09T09:23:31.7731529+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Thunderbird/Thunderbird_2k.log"
+2023-11-09T09:23:31.7736108+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 128.4µs.
+2023-11-09T09:23:31.7753101+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.5752ms.
+2023-11-09T09:23:31.7858763+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 10.3443ms.
+2023-11-09T09:23:31.7862135+08:00 [INFO] Thunderbird: 196 templates found.
+2023-11-09T09:23:31.7968763+08:00 [INFO] Thunderbird: Group Accuracy 0.9655
+2023-11-09T09:23:31.7991655+08:00 [DEBUG] (1) rustlog::evaluator: "E77", {102: 1, 156: 1}, 2
+2023-11-09T09:23:31.7993241+08:00 [DEBUG] (1) rustlog::evaluator: "E9", {117: 1, 118: 1}, 2
+2023-11-09T09:23:31.7996549+08:00 [DEBUG] (1) rustlog::evaluator: "E84", {51: 1, 53: 1, 55: 1, 52: 1, 54: 1}, 5
+2023-11-09T09:23:31.7998345+08:00 [DEBUG] (1) rustlog::evaluator: "E2", {26: 1, 28: 1, 29: 1, 30: 1, 27: 1}, 5
+2023-11-09T09:23:31.8000442+08:00 [DEBUG] (1) rustlog::evaluator: "E10", {47: 1, 63: 1, 34: 1, 35: 1, 46: 1, 36: 1, 62: 1}, 7
+2023-11-09T09:23:31.8002924+08:00 [DEBUG] (1) rustlog::evaluator: "E97", {173: 1, 172: 1, 174: 1, 170: 1, 179: 1, 176: 1, 178: 1, 165: 1, 168: 1, 171: 1, 167: 1, 175: 1, 164: 1, 177: 1, 169: 1, 166: 1, 180: 1}, 17
+2023-11-09T09:23:31.8006095+08:00 [DEBUG] (1) rustlog::evaluator: "E124", {157: 1, 162: 1}, 2
+2023-11-09T09:23:31.8007787+08:00 [DEBUG] (1) rustlog::evaluator: "E106", {193: 2, 183: 2, 182: 2, 191: 1, 184: 2, 185: 1, 190: 1, 186: 1, 188: 1, 187: 1, 189: 1, 192: 1}, 16
+2023-11-09T09:23:31.8010404+08:00 [DEBUG] (1) rustlog::evaluator: "E111", {20: 2, 153: 1, 23: 8}, 11
+2023-11-09T09:23:31.8011914+08:00 [DEBUG] (1) rustlog::evaluator: "E82", {50: 1, 48: 1}, 2
+2023-11-09T09:23:31.8023411+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Windows/Windows_2k.log"
+2023-11-09T09:23:31.8027669+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 122µs.
+2023-11-09T09:23:31.8041273+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.2474ms.
+2023-11-09T09:23:31.8194721+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 15.156ms.
+2023-11-09T09:23:31.8198934+08:00 [INFO] Windows: 57 templates found.
+2023-11-09T09:23:31.8298837+08:00 [INFO] Windows: Group Accuracy 0.996
+2023-11-09T09:23:31.8317267+08:00 [DEBUG] (1) rustlog::evaluator: "E24", {47: 1, 50: 1, 46: 1, 44: 1, 43: 1, 48: 1, 49: 1, 45: 1}, 8
+2023-11-09T09:23:31.8333276+08:00 [DEBUG] (1) rustlog::log_parser: Try read log file "./data/loghub_2k_corrected/Zookeeper/Zookeeper_2k.log"
+2023-11-09T09:23:31.8337734+08:00 [DEBUG] (1) rustlog::log_parser: Read file content to memory. Finished. Time cost: 124.9µs.
+2023-11-09T09:23:31.8351285+08:00 [TRACE] (1) rustlog::log_parser: [src\log_parser.rs:47] Split raw text to 2000 log lines. Time cost: 1.2345ms.
+2023-11-09T09:23:31.8446258+08:00 [DEBUG] (1) rustlog::log_parser: Parse completed. Time cost: 9.3539ms.
+2023-11-09T09:23:31.844956+08:00 [INFO] Zookeeper: 55 templates found.
+2023-11-09T09:23:31.8544323+08:00 [INFO] Zookeeper: Group Accuracy 0.9945
+2023-11-09T09:23:31.8563024+08:00 [DEBUG] (1) rustlog::evaluator: "E44", {31: 2, 24: 3, 28: 2, 14: 1, 30: 1, 32: 2}, 11

@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use std::fmt::{Debug};
 use std::hash::Hash;
 use log::debug;
+use crate::log_parser::ParsedLog;
 
 fn comb_2(n: u64) -> u64 {
     if n == 0 { panic!("Comb number should not be 0."); }
@@ -20,7 +21,8 @@ fn counter<'a, T: Eq + Hash + 'a>(list: impl Iterator<Item=&'a T>) -> HashMap<&'
 }
 
 pub(crate) fn get_accuracy<T1: Eq + Hash + Debug, T2: Eq + Hash + Debug>
-(ground_truth: Vec<T1>, parsed_result: Vec<T2>) -> (f64, f64, f64, f64) {
+(ground_truth: &Vec<T1>, parsed_result: &Vec<T2>) -> (f64, f64, f64, f64) {
+    assert_eq!(ground_truth.len(), parsed_result.len());
     let mut gt_counter: HashMap<&T1, Vec<usize>> = HashMap::new();
     for (i, event_id) in ground_truth.iter().enumerate() {
         gt_counter.entry(event_id).or_insert(vec![]).push(i);
@@ -49,9 +51,6 @@ pub(crate) fn get_accuracy<T1: Eq + Hash + Debug, T2: Eq + Hash + Debug>
                 accurate_events += pr_counter[parsed_event_id].len() as u64;
             }
         }
-        else {
-            debug!("Parsed Event {:?} map to {:?}", parsed_event_id, error_counter.keys())
-        }
         for &count in error_counter.values() {
             if count > 1 {
                 accurate_pairs += comb_2(count);
@@ -66,6 +65,40 @@ pub(crate) fn get_accuracy<T1: Eq + Hash + Debug, T2: Eq + Hash + Debug>
 
     (precision, recall, f_measure, accuracy)
 }
+
+pub(crate) fn get_accuracy_detail<T1: Eq + Hash + Debug>
+(ground_truth: Vec<T1>, parsed_result: &ParsedLog) -> () {
+    assert_eq!(ground_truth.len(), parsed_result.parsed_list.len());
+    let mut gt_counter: HashMap<&T1, Vec<usize>> = HashMap::new();
+    for (i, event_id) in ground_truth.iter().enumerate() {
+        gt_counter.entry(event_id).or_insert(vec![]).push(i);
+    }
+
+    let mut pr_counter: HashMap<&usize, Vec<usize>> = HashMap::new();
+    for (i, event_id) in parsed_result.parsed_list.iter().enumerate() {
+        pr_counter.entry(event_id).or_insert(vec![]).push(i);
+    }
+
+    for pr_event_id in pr_counter.keys() {
+        let error_counter = counter(
+            pr_counter[pr_event_id].iter().map(|&idx| &ground_truth[idx])
+        );
+        if error_counter.len() != 1 {
+            debug!("{:?}, {:?}, {}", pr_event_id, error_counter, pr_counter[pr_event_id].len());
+        }
+    }
+    for gt_event_id in gt_counter.keys() {
+        let error_counter = counter(
+            gt_counter[gt_event_id].iter().map(|&idx| &parsed_result.parsed_list[idx])
+        );
+        if error_counter.len() != 1 {
+            debug!("{:?}, {:?}, {}", gt_event_id, error_counter, gt_counter[gt_event_id].len());
+        }
+    }
+
+
+}
+
 
 #[cfg(test)]
 mod tests {
@@ -136,7 +169,7 @@ mod tests {
     fn get_accuracy_trivial_success() {
         let gt = vec!['1', '1' , '2', '2', '3', '4'];
         let pr = vec![1, 1, 2, 2, 3, 4];
-        let acc = get_accuracy(gt, pr);
+        let acc = get_accuracy(&gt, &pr);
         assert_eq!(acc.0, 1.0);
         assert_eq!(acc.1, 1.0);
         assert_eq!(acc.2, 1.0);
@@ -147,7 +180,7 @@ mod tests {
     fn get_accuracy_success() {
         let gt = vec!['1', '1', '1', '2', '2', '3', '3', '4'];
         let pr = vec![1, 1, 1, 2, 2, 2, 2, 4];
-        let acc = get_accuracy(gt, pr);
+        let acc = get_accuracy(&gt, &pr);
         assert_eq!(acc.0, 5. / 9.);
         assert_eq!(acc.1, 1.0);
         assert_eq!(acc.2, 10. / 14.);

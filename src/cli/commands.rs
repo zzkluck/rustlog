@@ -3,7 +3,7 @@ use log::info;
 use crate::cli::args::{BenchmarkArgs, ParseArgs};
 use crate::dataset::LogDataset;
 use crate::dataset::loghub_common_dataset::LoghubCommonDataset;
-use crate::evaluator::get_accuracy;
+use crate::evaluator::{get_accuracy, get_accuracy_detail};
 use crate::log_parser::easylog::EasyLog;
 use crate::log_parser::{LogParser};
 use crate::utils;
@@ -30,7 +30,8 @@ fn parse_from_loghub(parser: Box<dyn LogParser>, log_type: &str) {
     let pl = parser.parse_from_file(log_path.as_ref());
     info!("{}: {} templates found.", log_type, pl.templates.len());
     let dataset = LoghubCommonDataset::from_file(structured_path.as_ref());
-    info!("{}: Group Accuracy {:}", log_type,  get_accuracy(dataset.iter_event_id(), pl.parsed_list).3)
+    info!("{}: Group Accuracy {:}", log_type,  get_accuracy(&dataset.iter_event_id(), &pl.parsed_list).3);
+    get_accuracy_detail(dataset.iter_event_id(), &pl);
 }
 pub fn parse_command(args: ParseArgs) {
     let parser = get_parse_method(&args.method, &args.config_path);

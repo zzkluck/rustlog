@@ -43,7 +43,7 @@ mod tests {
     # [test]
     fn iter_event_id_test() {
         let ad = AndroidDataset::from_file
-                (r"C:\Users\zzkluck\Desktop\LogCodes\clog\logs\Andriod\Andriod_2k.log_structured.csv".as_ref());
+                (r"./data/loghub_2k_corrected/Android/Android_2k.log_structured_corrected.csv".as_ref());
         let event_ids = ad.get_event_ids();
         assert_eq!("E100", event_ids[0]);
         assert_eq!("E10", event_ids[1]);

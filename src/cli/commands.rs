@@ -1,4 +1,5 @@
 use std::path::Path;
+use log::info;
 use crate::cli::args::{BenchmarkArgs, ParseArgs};
 use crate::dataset::LogDataset;
 use crate::dataset::loghub_common_dataset::LoghubCommonDataset;
@@ -27,10 +28,9 @@ fn parse_from_loghub(parser: Box<dyn LogParser>, log_type: &str) {
                                   data_root, log_type);
 
     let pl = parser.parse_from_file(log_path.as_ref());
-    println!("{} templates found.", pl.templates.len());
+    info!("{}: {} templates found.", log_type, pl.templates.len());
     let dataset = LoghubCommonDataset::from_file(structured_path.as_ref());
-    println!("{:?}", get_accuracy(dataset.iter_event_id(),
-                                  pl.parsed_list))
+    info!("{}: Group Accuracy {:}", log_type,  get_accuracy(dataset.iter_event_id(), pl.parsed_list).3)
 }
 pub fn parse_command(args: ParseArgs) {
     let parser = get_parse_method(&args.method, &args.config_path);

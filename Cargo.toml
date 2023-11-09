@@ -10,11 +10,9 @@ lazy_static = "*"
 csv = "*"
 chrono = "*"
 fancy-regex = "*"
-regex = "*"
-pcre2 = "*"
 tqdm = "*"
 log = "*"
-env_logger = "*"
+simplelog = "*"
 toml = "*"
 serde = {version = "*", features = ["derive"]}
 clap = {version = "*", features = ["derive"]}

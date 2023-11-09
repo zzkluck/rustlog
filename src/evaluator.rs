@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::fmt::{Debug};
 use std::hash::Hash;
-use log::debug;
+use log::{debug, trace};
 use crate::log_parser::ParsedLog;
 
 fn comb_2(n: u64) -> u64 {
@@ -84,7 +84,8 @@ pub(crate) fn get_accuracy_detail<T1: Eq + Hash + Debug>
             pr_counter[pr_event_id].iter().map(|&idx| &ground_truth[idx])
         );
         if error_counter.len() != 1 {
-            debug!("{:?}, {:?}, {}", pr_event_id, error_counter, pr_counter[pr_event_id].len());
+            debug!("{} - {:?} -> {:?}", pr_counter[pr_event_id].len(), pr_event_id, error_counter);
+            trace!("{:?}", parsed_result.templates[**pr_event_id]);
         }
     }
     for gt_event_id in gt_counter.keys() {
@@ -92,7 +93,10 @@ pub(crate) fn get_accuracy_detail<T1: Eq + Hash + Debug>
             gt_counter[gt_event_id].iter().map(|&idx| &parsed_result.parsed_list[idx])
         );
         if error_counter.len() != 1 {
-            debug!("{:?}, {:?}, {}", gt_event_id, error_counter, gt_counter[gt_event_id].len());
+            debug!("{} - {:?} -> {:?}", gt_counter[gt_event_id].len(), gt_event_id, error_counter);
+            for i in error_counter.keys() {
+                trace!("{:?}", parsed_result.templates[**i]);
+            }
         }
     }
 

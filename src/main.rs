@@ -23,7 +23,7 @@ fn main() {
 
     CombinedLogger::init(
         vec![
-            TermLogger::new(LevelFilter::Info, config.clone(), TerminalMode::Mixed, ColorChoice::Auto),
+            TermLogger::new(LevelFilter::Trace, config.clone(), TerminalMode::Mixed, ColorChoice::Auto),
             WriteLogger::new(LevelFilter::Trace, config.clone(), OpenOptions::new().append(true).open("easy.log").unwrap()),
         ]
     ).unwrap();

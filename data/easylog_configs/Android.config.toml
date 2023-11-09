@@ -1,10 +1,10 @@
 specific = [
-    '((?:true)|(?:false))',
     '((?<=action=)[^,]+)',
 ]
 [substitute]
+'((?:true)|(?:false))'          = '<BOOL>'
+'".*?"'                         = '<STR>'
 '(?<a>\w+)=([^\s]*)'            = '$a <$a>'
-'\".*?\"'                       = '<STR>'
-'([\w-]+\.){2,}[\w-]+'          = '<DOMAIN>'
+'([\w$-]+\.){2,}[\w$-]+'         = '<DOMAIN>'
 '<bottom of call stack>'        = '<BOCS>'
-'[:\s]+'                        = ' '
+'[:\s\(\)\{\}]+'                = ' '

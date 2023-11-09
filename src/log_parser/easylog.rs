@@ -1,19 +1,20 @@
-use std::collections::HashMap;
+use std::collections::{HashMap};
 use std::fs::File;
 use std::io::Read;
 use std::path::Path;
 use tqdm::Iter;
 use serde::Deserialize;
 use fancy_regex::Regex;
+use crate::utils::DATE_ALIAS;
 use super::*;
 
 fn is_variable(token: &str) -> bool {
-    for c in token.chars(){
-        if c.is_numeric() {
-            return true;
-        }
-    }
-    false
+    token.len() == 0
+    || token == " "
+    || token.as_bytes()[0] == u8::try_from('<').unwrap()
+    || token.chars().any(|x| x.is_numeric())
+    || token.chars().all(|x| ('a' <= x.to_ascii_lowercase() && x.to_ascii_lowercase() <= 'f'))
+    || DATE_ALIAS.contains(token.to_ascii_uppercase().as_str())
 }
 
 #[derive(Deserialize)]

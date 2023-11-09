@@ -1,3 +1,4 @@
 specific = []
 [substitute]
+'(?<=lifetime )(\d{2}:\d{2})|(<1 sec)' = '<LIFETIME>'
 '\(.*?B\)' = '<SIZE>'

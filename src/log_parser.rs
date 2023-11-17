@@ -1,12 +1,10 @@
 pub mod easylog;
 
-
-use std::fs::File;
-use std::io::Read;
 use std::collections::HashMap;
 use std::path::Path;
-use log::{debug, trace};
+use log::{debug};
 use std::time::Instant;
+use crate::utils::read_lines_from_file;
 
 pub struct ParsedLog {
     pub templates: Vec<String>,
@@ -27,27 +25,10 @@ pub trait LogParser {
     fn parse(&self, logs: Vec<&str>) -> ParsedLog;
     fn parse_line(&self, log: &str) -> String;
     fn parse_from_file(&self, log_path: &Path) -> ParsedLog {
-        debug!("Try read log file {:?}", log_path);
-        let mut f = File::open(log_path)
-            .expect(&format!("Fail to open {}", log_path.to_str().unwrap()));
-        let mut buffer = String::new();
+        let lines = read_lines_from_file(log_path);
 
         let timer_start = Instant::now();
-        f.read_to_string(&mut buffer)
-            .expect(&format!("Fail to open {}", log_path.to_str().unwrap()));
-        debug!("Read file content to memory. Finished. Time cost: {:?}.", timer_start.elapsed());
-
-        let timer_start = Instant::now();
-        let mut lines: Vec<&str> = buffer.split("\n").collect();
-        if let Some(last_line) = lines.last() {
-            if *last_line == "" {
-                lines.pop();
-            }
-        }
-        trace!("Split raw text to {} log lines. Time cost: {:?}.", lines.len() ,timer_start.elapsed());
-
-        let timer_start = Instant::now();
-        let res = self.parse(lines);
+        let res = self.parse(lines.iter().map(|x| x.as_ref()).collect());
         debug!("Parse completed. Time cost: {:?}.", timer_start.elapsed());
 
         return res;

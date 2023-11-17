@@ -4,9 +4,13 @@ use std::fs::File;
 use std::hash::Hash;
 use std::io::Read;
 use std::path::Path;
+use std::str::FromStr;
+use std::time::Instant;
 use counter::Counter;
 use colored::{Colorize, Color};
 use fancy_regex::Regex;
+use log::{debug, trace};
+use polars::prelude::*;
 
 lazy_static! {
     pub static ref LOG_TYPES: Vec<String> = std::fs::read_dir("./data/loghub_2k_corrected")
@@ -80,11 +84,17 @@ pub fn combine_print(log_path: &Path) -> () {
     }
 }
 
-fn generate_logformat_regex(logformat: &str) -> (Vec<&str>, Regex) {
+fn get_all_named_group(re: &Regex) -> Vec<&str> {
+    re.capture_names()
+        .filter(|x| x.is_some())
+        .map(|x| x.unwrap())
+        .collect::<Vec<&str>>()
+}
+
+fn generate_logformat_regex(logformat: &str) -> Regex {
     let re_square = Regex::new(r"(<[^<>]+>)").unwrap();
     let re_space = Regex::new(r" +").unwrap();
 
-    let mut headers = Vec::<&str>::new();
     let mut regex = String::new();
     let mut start = 0usize;
 
@@ -94,29 +104,76 @@ fn generate_logformat_regex(logformat: &str) -> (Vec<&str>, Regex) {
         regex.push_str(splitter.as_ref());
         let header = &logformat[m.start()+1..m.end()-1];
         regex.push_str(&format!(r"(?P<{header}>.*?)"));
-        headers.push(header);
         start = m.end();
     }
     if start != logformat.len() {
         let splitter = re_space.replace_all(&logformat[start..], r"\s+");
         regex.push_str(splitter.as_ref());
     }
-    let regex = Regex::new(&format!("^{regex}$")).unwrap();
-    (headers, regex)
+    Regex::new(&format!("^{regex}$")).unwrap()
 }
 
+pub fn read_lines_from_file(path: &Path) -> Vec<String> {
+    debug!("Try read log file {:?}", path);
+    let mut f = File::open(path)
+        .expect(&format!("Fail to open {}", path.to_str().unwrap()));
+    let mut buffer = String::new();
+
+    let timer_start = Instant::now();
+    f.read_to_string(&mut buffer)
+        .expect(&format!("Fail to open {}", path.to_str().unwrap()));
+    debug!("Read file content to memory. Finished. Time cost: {:?}.", timer_start.elapsed());
+
+    let timer_start = Instant::now();
+    let mut lines: Vec<String> = buffer.split("\n").map(|x| String::from_str(x).unwrap()).collect();
+    if let Some(last_line) = lines.last() {
+        if *last_line == "" {
+            lines.pop();
+        }
+    }
+    trace!("Split raw text to {} log lines. Time cost: {:?}.", lines.len() ,timer_start.elapsed());
+    lines
+}
+
+fn log_to_dataframe(lines: Vec<&str>, re: Regex) -> DataFrame {
+    let headers = get_all_named_group(&re);
+    let mut series_buffer = vec![];
+    for _ in headers.iter() {
+        series_buffer.push(vec![]);
+    }
+    for line in lines {
+        match re.captures(line) {
+            Ok(captures) => {
+                let captures = captures.unwrap();
+                for (i, name) in headers.iter().enumerate() {
+                    series_buffer[i].push(captures.name(name).unwrap().as_str());
+                }
+            }
+            Err(_) => {
+                debug!("Log format not match. {}", line);
+            }
+        }
+    }
+    let mut series = vec![];
+    for (i, name) in headers.iter().enumerate() {
+        series.push(Series::new(name, &series_buffer[i]));
+    }
+    DataFrame::new(series).unwrap()
+}
 
 #[cfg(test)]
 mod tests {
     use super::*;
     #[test]
     fn generate_logformat_regex_success() {
-        let (headers, re) =
+        let re =
             generate_logformat_regex("<Date> <Time> <Pid> <Level> <Component>: <Content>");
+        let headers = get_all_named_group(&re);
         assert_eq!(headers, vec!["Date", "Time", "Pid", "Level", "Component", "Content"]);
         let test_log =
             "081110 115218 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_4545188422655940106";
         let m = re.captures(test_log).unwrap().unwrap();
+
         assert_eq!(m.name("Date").unwrap().as_str(), "081110");
         assert_eq!(m.name("Time").unwrap().as_str(), "115218");
         assert_eq!(m.name("Pid").unwrap().as_str(), "13");
@@ -124,6 +181,16 @@ mod tests {
         assert_eq!(m.name("Component").unwrap().as_str(), "dfs.DataBlockScanner");
         assert_eq!(m.name("Content").unwrap().as_str(), "Verification succeeded for blk_4545188422655940106");
     }
+    #[test]
+    fn log_to_dataframe_success(){
+        let re =
+            generate_logformat_regex("<Date> <Time> <Pid> <Level> <Component>: <Content>");
+        let lines = &read_lines_from_file(r"data/loghub_2k_corrected/HDFS/HDFS_2k.log".as_ref())[..10];
+        let df = log_to_dataframe(lines.iter().map(|x| x.as_ref()).collect(), re);
+        println!("{:?}", df);
+    }
+
+
     #[test]
     fn counter_normal_success() {
         let stub: Vec<i32> = vec![1, 2, 2, 3, 3, 3, 4, 4, 4, 4];

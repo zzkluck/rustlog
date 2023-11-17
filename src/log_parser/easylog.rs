@@ -23,7 +23,6 @@ struct Config {
     substitute: HashMap<String, String>
 }
 
-#[allow(dead_code)]
 pub struct EasyLog {
     specific: Vec<Regex>,
     substitute: Vec<(Regex, String)>

@@ -30,7 +30,11 @@ pub struct EasyLog {
 }
 
 impl EasyLog {
-    pub fn new(config_path: &Path) -> Self{
+    pub fn new(config_path: Option<&Path>) -> Self{
+        if config_path.is_none() {
+            return EasyLog {specific:vec![], substitute:vec![]}
+        }
+        let config_path = config_path.unwrap();
         let mut f = File::open(config_path)
             .expect(&format!("Fail to open {}", config_path.to_str().unwrap()));
         let mut buffer = String::new();

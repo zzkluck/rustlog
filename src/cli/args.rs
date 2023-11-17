@@ -15,10 +15,10 @@ pub struct BenchmarkArgs {
 
 #[derive(Args, Debug)]
 pub struct ParseArgs {
-    #[arg(short, long, value_name = "LOG_TYPE")]
-    pub(crate) log_type: String,
+    #[arg(short, long, value_name = "LOG_PATH")]
+    pub(crate) log_path: String,
     #[arg(short, long, value_name = "CONFIG_PATH")]
-    pub(crate) config_path: PathBuf,
+    pub(crate) config_path: Option<PathBuf>,
     #[arg(short, long, value_name = "METHOD")]
     pub(crate) method: Option<String>,
 }

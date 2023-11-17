@@ -16,3 +16,5 @@ simplelog = "*"
 toml = "*"
 serde = {version = "*", features = ["derive"]}
 clap = {version = "*", features = ["derive"]}
+colored = "*"
+counter = "*"

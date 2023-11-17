@@ -14,8 +14,13 @@ use simplelog::*;
 use crate::cli::Cli;
 use crate::cli::args::{CliOperation};
 use crate::cli::commands::{benchmark_command, parse_command};
+use crate::utils::combine_print;
 
 fn main() {
+    use crate::utils::combine_print;
+    combine_print("./data/loghub_2k_corrected/HDFS/HDFS_2k.log".as_ref());
+}
+fn main1() {
     let config = ConfigBuilder::new()
         .set_time_offset_to_local().unwrap()
         .set_time_format_rfc3339()

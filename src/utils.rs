@@ -4,6 +4,8 @@ use std::fs::File;
 use std::hash::Hash;
 use std::io::Read;
 use std::path::Path;
+use counter::Counter;
+use colored::{Colorize, Color};
 
 lazy_static! {
     pub static ref LOG_TYPES: Vec<String> = std::fs::read_dir("./data/loghub_2k_corrected")
@@ -18,7 +20,12 @@ lazy_static! {
         "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
         "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN",
         "PDT", "UTC"]);
+}
 
+lazy_static! {
+    pub static ref TERM_COLORS: Vec<Color> = vec![
+        Color::Red, Color::Green, Color::Yellow, Color::Blue, Color::Magenta, Color::Cyan
+    ];
 }
 
 pub fn counter<'a, T: Eq + Hash + 'a>(list: impl Iterator<Item=&'a T>) -> HashMap<&'a T, u64> {
@@ -45,10 +52,30 @@ pub fn combine_print(log_path: &Path) -> () {
     }
 
     let sentences: Vec<Vec<&str>> = lines.iter().map(|line| line.split(' ').collect()).collect();
-    let word_bag: HashMap<&&str, u64> =  counter(sentences.iter().flat_map(|x| x));
+    let word_bag = sentences.iter().flat_map(|x| x).collect::<Counter<_>>();
+    // let highest_frequency = word_bag.k_most_common_ordered(1)[0].1;
+    // let weight = 0.1;
+    // let threshold: usize = (highest_frequency as f64 * weight) as usize;
+    let threshold: usize = 20;
 
-    for words in sentences {
-
+    for words in sentences.iter() {
+        let combine_len = words.iter().map(|w| word_bag.get(w).unwrap()).collect::<Counter<_>>();
+        let mut color_map = HashMap::<&usize, _>::new();
+        for (k, v) in combine_len.k_most_common_ordered(TERM_COLORS.len()) {
+            if *k < threshold { continue; }
+            if v == 1 { break; }
+            color_map.insert(k, TERM_COLORS[color_map.len()]);
+        }
+        for w in words.iter() {
+            let wc = word_bag[w];
+            if color_map.contains_key(&wc) {
+                print!("{} ", w.color(color_map[&wc]));
+            }
+            else {
+                print!("{} ", w);
+            }
+        }
+        println!();
     }
 }
 

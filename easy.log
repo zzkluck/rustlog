@@ -2947,3 +2947,202 @@ Thu, 09 Nov 2023 00:53:53 +0000 [INFO] Zookeeper: Group Accuracy 0.9945
 2023-11-17T14:45:39.3679583+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server environment:user.name=zookeeper"
 2023-11-17T14:45:39.3681634+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server environment:os.name=Linux"
 2023-11-17T14:45:39.3683586+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server environment:user.dir=/"
+2023-11-17T15:22:17.3640954+08:00 [INFO] Android: 159 templates found.
+2023-11-17T15:22:17.3664185+08:00 [INFO] Android: Group Accuracy 0.9575
+2023-11-17T15:22:17.3684195+08:00 [DEBUG] (1) rustlog::evaluator: 6 - 45 -> Counter { map: {"E160": 2, "E161": 4}, zero: 0 }
+2023-11-17T15:22:17.3687766+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "updateLightsLocked,mInCall =<BOOL>,mScreenOn = == null?<BOOL>"
+2023-11-17T15:22:17.3691591+08:00 [DEBUG] (1) rustlog::evaluator: 2 - 114 -> Counter { map: {"E125": 1, "E124": 1}, zero: 0 }
+2023-11-17T15:22:17.3694268+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "setSpeakerphoneOn on"
+2023-11-17T15:22:17.3698962+08:00 [DEBUG] (1) rustlog::evaluator: 26 - "E108" -> Counter { map: {11: 25, 7: 1}, zero: 0 }
+2023-11-17T15:22:17.3701756+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "release lock flg tag name ws uid pid"
+2023-11-17T15:22:17.3703809+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "release lock flg tag Lock\", name ws uid pid"
+2023-11-17T15:22:17.370719+08:00 [DEBUG] (1) rustlog::evaluator: 26 - "E10" -> Counter { map: {1: 1, 25: 25}, zero: 0 }
+2023-11-17T15:22:17.37097+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "acquire lock flags tag Lock\", name ws uid pid"
+2023-11-17T15:22:17.3711782+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "acquire lock flags tag name ws uid pid"
+2023-11-17T15:22:17.3716475+08:00 [DEBUG] (1) rustlog::evaluator: 25 - "E41" -> Counter { map: {16: 24, 15: 1}, zero: 0 }
+2023-11-17T15:22:17.3720417+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Destroying surface Surface name called by"
+2023-11-17T15:22:17.3722444+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Destroying surface Surface name - called by"
+2023-11-17T15:22:17.3946769+08:00 [INFO] Apache: 6 templates found.
+2023-11-17T15:22:17.3964627+08:00 [INFO] Apache: Group Accuracy 1
+2023-11-17T15:22:17.5160773+08:00 [INFO] BGL: 119 templates found.
+2023-11-17T15:22:17.5181732+08:00 [INFO] BGL: Group Accuracy 0.9975
+2023-11-17T15:22:17.5203879+08:00 [DEBUG] (1) rustlog::evaluator: 3 - 43 -> Counter { map: {"E79": 1, "E106": 1, "E65": 1}, zero: 0 }
+2023-11-17T15:22:17.5206829+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] ""
+2023-11-17T15:22:17.521019+08:00 [DEBUG] (1) rustlog::evaluator: 2 - "E39" -> Counter { map: {76: 1, 56: 1}, zero: 0 }
+2023-11-17T15:22:17.5213518+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "ciod: Missing or invalid fields on line of node map file map"
+2023-11-17T15:22:17.5215977+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "ciod: Missing or invalid fields on line of node map file mapfile"
+2023-11-17T15:22:17.5758393+08:00 [INFO] Hadoop: 114 templates found.
+2023-11-17T15:22:17.5781217+08:00 [INFO] Hadoop: Group Accuracy 0.991
+2023-11-17T15:22:17.5800305+08:00 [DEBUG] (1) rustlog::evaluator: 3 - 32 -> Counter { map: {"E65": 1, "E87": 1, "E53": 1}, zero: 0 }
+2023-11-17T15:22:17.5803198+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] ""
+2023-11-17T15:22:17.5808151+08:00 [DEBUG] (1) rustlog::evaluator: 2 - "E8" -> Counter { map: {30: 1, 29: 1}, zero: 0 }
+2023-11-17T15:22:17.5810635+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "adding path spec: /ws/*"
+2023-11-17T15:22:17.5812625+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "adding path spec: /mapreduce/*"
+2023-11-17T15:22:17.58158+08:00 [DEBUG] (1) rustlog::evaluator: 13 - "E77" -> Counter { map: {83: 3, 66: 10}, zero: 0 }
+2023-11-17T15:22:17.5818448+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Processing the event EventType: CONTAINER_REMOTE_CLEANUP for container taskAttempt"
+2023-11-17T15:22:17.5820645+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container taskAttempt"
+2023-11-17T15:22:17.6052932+08:00 [INFO] HDFS: 14 templates found.
+2023-11-17T15:22:17.6074994+08:00 [INFO] HDFS: Group Accuracy 1
+2023-11-17T15:22:17.6626796+08:00 [INFO] HealthApp: 75 templates found.
+2023-11-17T15:22:17.6646538+08:00 [INFO] HealthApp: Group Accuracy 1
+2023-11-17T15:22:17.6844867+08:00 [INFO] HPC: 49 templates found.
+2023-11-17T15:22:17.6864113+08:00 [INFO] HPC: Group Accuracy 0.9365
+2023-11-17T15:22:17.6881111+08:00 [DEBUG] (1) rustlog::evaluator: 91 - 48 -> Counter { map: {"E30": 2, "E29": 45, "E28": 44}, zero: 0 }
+2023-11-17T15:22:17.6884272+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "NIFF: node has detected an available network connection on network via interface"
+2023-11-17T15:22:17.6888504+08:00 [DEBUG] (1) rustlog::evaluator: 36 - "E9" -> Counter { map: {28: 1, 25: 2, 26: 29, 27: 2, 24: 1, 29: 1}, zero: 0 }
+2023-11-17T15:22:17.6892266+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "ClusterFileSystem: ServerFileSystem domain sc_cluster_backup is no longer served by node"
+2023-11-17T15:22:17.689457+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "ClusterFileSystem: ServerFileSystem domain root_domain is no longer served by node"
+2023-11-17T15:22:17.6897049+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "ClusterFileSystem: ServerFileSystem domain is no longer served by node"
+2023-11-17T15:22:17.6899843+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "ClusterFileSystem: ServerFileSystem domain cluster_usr_backup is no longer served by node"
+2023-11-17T15:22:17.6902097+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "ClusterFileSystem: ServerFileSystem domain cluster_root_backup is no longer served by node"
+2023-11-17T15:22:17.6904856+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "ClusterFileSystem: ServerFileSystem domain cluster_var_backup is no longer served by node"
+2023-11-17T15:22:17.8250689+08:00 [INFO] Linux: 115 templates found.
+2023-11-17T15:22:17.8271394+08:00 [INFO] Linux: Group Accuracy 0.755
+2023-11-17T15:22:17.828833+08:00 [DEBUG] (1) rustlog::evaluator: 372 - 2 -> Counter { map: {"E18": 351, "E19": 4, "E17": 17}, zero: 0 }
+2023-11-17T15:22:17.8291215+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "authentication failure; logname uid euid tty ruser rhost user"
+2023-11-17T15:22:17.8294169+08:00 [DEBUG] (1) rustlog::evaluator: 118 - 0 -> Counter { map: {"E16": 117, "E15": 1}, zero: 0 }
+2023-11-17T15:22:17.8296862+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "authentication failure; logname uid euid tty ruser rhost"
+2023-11-17T15:22:17.9451613+08:00 [INFO] Mac: 345 templates found.
+2023-11-17T15:22:17.9478114+08:00 [INFO] Mac: Group Accuracy 0.953
+2023-11-17T15:22:17.9495114+08:00 [DEBUG] (1) rustlog::evaluator: 32 - 25 -> Counter { map: {"E141": 4, "E142": 28}, zero: 0 }
+2023-11-17T15:22:17.9498557+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "ARPT MDNS Addr"
+2023-11-17T15:22:17.9505911+08:00 [DEBUG] (1) rustlog::evaluator: 9 - 84 -> Counter { map: {"E319": 8, "E320": 1}, zero: 0 }
+2023-11-17T15:22:17.9508593+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "tcp_connection_tls_session_error_callback_imp error"
+2023-11-17T15:22:17.9511281+08:00 [DEBUG] (1) rustlog::evaluator: 4 - 34 -> Counter { map: {"E263": 3, "E262": 1}, zero: 0 }
+2023-11-17T15:22:17.9513977+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "mDNS_RegisterInterface Frequent transitions for interface"
+2023-11-17T15:22:17.9517255+08:00 [DEBUG] (1) rustlog::evaluator: 13 - 26 -> Counter { map: {"E111": 9, "E112": 4}, zero: 0 }
+2023-11-17T15:22:17.9519781+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "AirPort Link Up on"
+2023-11-17T15:22:17.9522953+08:00 [DEBUG] (1) rustlog::evaluator: 5 - 5 -> Counter { map: {"E260": 2, "E261": 3}, zero: 0 }
+2023-11-17T15:22:17.9525711+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] "mDNS_DeregisterInterface Frequent transitions for interface"
+2023-11-17T15:22:17.9529349+08:00 [DEBUG] (1) rustlog::evaluator: 2 - "E166" -> Counter { map: {335: 1, 312: 1}, zero: 0 }
+2023-11-17T15:22:17.9532022+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "CCDataTap profileRemoved Owner Name AssociationEventHistory"
+2023-11-17T15:22:17.9534108+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "CCDataTap profileRemoved Owner Name StateSnapshots"
+2023-11-17T15:22:17.95367+08:00 [DEBUG] (1) rustlog::evaluator: 3 - "E177" -> Counter { map: {213: 2, 169: 1}, zero: 0 }
+2023-11-17T15:22:17.9539158+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "CCLogTap profileRemoved Owner Name"
+2023-11-17T15:22:17.9541156+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "CCLogTap profileRemoved Owner Name OneStats"
+2023-11-17T15:22:17.9544465+08:00 [DEBUG] (1) rustlog::evaluator: 3 - "E285" -> Counter { map: {127: 2, 319: 1}, zero: 0 }
+2023-11-17T15:22:17.9547686+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PBRequester failed with Error Error Domain Code The Internet connection appears to offline. UserInfo {Error Domain Code The Internet connection appears to offline. UserInfo //<DOMAIN>/dispatcher.arpc NSErrorFailingURLKey //<DOMAIN>/dispatcher.arpc _kCFStreamErrorCodeKey _kCFStreamErrorDomainKey NSLocalizedDescription Internet connection appears to offline.}} NSErrorFailingURLStringKey //<DOMAIN>/dispatcher.arpc NSErrorFailingURLKey //<DOMAIN>/dispatcher.arpc _kCFStreamErrorDomainKey _kCFStreamErrorCodeKey NSLocalizedDescription Internet connection appears to offline.}"
+2023-11-17T15:22:17.9550445+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PBRequester failed with Error Error Domain Code The Internet connection appears to offline. UserInfo {Error Domain Code The Internet connection appears to offline. UserInfo //<DOMAIN>/clls/wloc NSErrorFailingURLKey //<DOMAIN>/clls/wloc _kCFStreamErrorCodeKey _kCFStreamErrorDomainKey NSLocalizedDescription Internet connection appears to offline.}} NSErrorFailingURLStringKey //<DOMAIN>/clls/wloc NSErrorFailingURLKey //<DOMAIN>/clls/wloc _kCFStreamErrorDomainKey _kCFStreamErrorCodeKey NSLocalizedDescription Internet connection appears to offline.}"
+2023-11-17T15:22:17.9554932+08:00 [DEBUG] (1) rustlog::evaluator: 6 - "E204" -> Counter { map: {247: 2, 174: 4}, zero: 0 }
+2023-11-17T15:22:17.9557459+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Will write to - AssocFail sts"
+2023-11-17T15:22:17.9559458+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Will write to - AuthFail sts"
+2023-11-17T15:22:17.9562587+08:00 [DEBUG] (1) rustlog::evaluator: 3 - "E280" -> Counter { map: {277: 1, 151: 2}, zero: 0 }
+2023-11-17T15:22:17.9565071+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Opened file /var/vm/sleepimage size extents maxio ssd"
+2023-11-17T15:22:17.9567282+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Opened file /var/log/SleepWakeStacks.bin size extents maxio ssd"
+2023-11-17T15:22:17.9569595+08:00 [DEBUG] (1) rustlog::evaluator: 3 - "E99" -> Counter { map: {166: 1, 170: 2}, zero: 0 }
+2023-11-17T15:22:17.9572549+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "FigByteStream >>>> FigByteStreamStatsLogOneRead ByteStream read of bytes @ took secs. to complete reads >= sec."
+2023-11-17T15:22:17.9574736+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "FigByteStream >>>> FigByteStreamStatsLogOneRead ByteStream read of bytes @ took sec. to complete reads >= sec."
+2023-11-17T15:22:17.9577304+08:00 [DEBUG] (1) rustlog::evaluator: 5 - "E206" -> Counter { map: {196: 2, 71: 3}, zero: 0 }
+2023-11-17T15:22:17.9579785+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "country code set to 'US'."
+2023-11-17T15:22:17.958209+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "country code set to"
+2023-11-17T15:22:17.958506+08:00 [DEBUG] (1) rustlog::evaluator: 4 - "E299" -> Counter { map: {320: 1, 130: 3}, zero: 0 }
+2023-11-17T15:22:17.9588067+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Sandbox QuickLookSatelli deny mach-lookup"
+2023-11-17T15:22:17.9590275+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Sandbox QQ deny mach-lookup"
+2023-11-17T15:22:17.9592929+08:00 [DEBUG] (1) rustlog::evaluator: 2 - "E286" -> Counter { map: {233: 1, 122: 1}, zero: 0 }
+2023-11-17T15:22:17.9596109+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PBRequester failed with Error Error Domain Code The request timed out. UserInfo {Error Domain Code The request timed out. UserInfo //<DOMAIN>/clls/wloc NSErrorFailingURLKey //<DOMAIN>/clls/wloc _kCFStreamErrorCodeKey _kCFStreamErrorDomainKey NSLocalizedDescription request timed out.}} NSErrorFailingURLStringKey //<DOMAIN>/clls/wloc NSErrorFailingURLKey //<DOMAIN>/clls/wloc _kCFStreamErrorDomainKey _kCFStreamErrorCodeKey NSLocalizedDescription request timed out.}"
+2023-11-17T15:22:17.9598835+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PBRequester failed with Error Error Domain Code The request timed out. UserInfo {Error Domain Code The request timed out. UserInfo //<DOMAIN>/dispatcher.arpc NSErrorFailingURLKey //<DOMAIN>/dispatcher.arpc _kCFStreamErrorCodeKey _kCFStreamErrorDomainKey NSLocalizedDescription request timed out.}} NSErrorFailingURLStringKey //<DOMAIN>/dispatcher.arpc NSErrorFailingURLKey //<DOMAIN>/dispatcher.arpc _kCFStreamErrorDomainKey _kCFStreamErrorCodeKey NSLocalizedDescription request timed out.}"
+2023-11-17T15:22:18.1332224+08:00 [INFO] OpenSSH: 29 templates found.
+2023-11-17T15:22:18.1352806+08:00 [INFO] OpenSSH: Group Accuracy 0.8195
+2023-11-17T15:22:18.1372999+08:00 [DEBUG] (1) rustlog::evaluator: 135 - "E10" -> Counter { map: {5: 129, 23: 6}, zero: 0 }
+2023-11-17T15:22:18.1375679+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Failed password for user from port"
+2023-11-17T15:22:18.1377925+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Failed password for user port"
+2023-11-17T15:22:18.1380362+08:00 [DEBUG] (1) rustlog::evaluator: 113 - "E13" -> Counter { map: {21: 6, 1: 107}, zero: 0 }
+2023-11-17T15:22:18.1382955+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Invalid user"
+2023-11-17T15:22:18.1385182+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Invalid user from"
+2023-11-17T15:22:18.1389671+08:00 [DEBUG] (1) rustlog::evaluator: 113 - "E12" -> Counter { map: {2: 107, 22: 6}, zero: 0 }
+2023-11-17T15:22:18.1392279+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "input_userauth_request: invalid user [preauth]"
+2023-11-17T15:22:18.1395005+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "input_userauth_request: invalid user"
+2023-11-17T15:22:18.1868507+08:00 [INFO] OpenStack: 43 templates found.
+2023-11-17T15:22:18.1888081+08:00 [INFO] OpenStack: Group Accuracy 1
+2023-11-17T15:22:18.3095873+08:00 [INFO] Proxifier: 8 templates found.
+2023-11-17T15:22:18.3115193+08:00 [INFO] Proxifier: Group Accuracy 1
+2023-11-17T15:22:18.3420884+08:00 [INFO] Spark: 36 templates found.
+2023-11-17T15:22:18.3439961+08:00 [INFO] Spark: Group Accuracy 1
+2023-11-17T15:22:18.3704016+08:00 [INFO] Thunderbird: 194 templates found.
+2023-11-17T15:22:18.3728254+08:00 [INFO] Thunderbird: Group Accuracy 0.9655
+2023-11-17T15:22:18.3747872+08:00 [DEBUG] (1) rustlog::evaluator: 2 - 122 -> Counter { map: {"E142": 1, "E115": 1}, zero: 0 }
+2023-11-17T15:22:18.3751092+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:80] ""
+2023-11-17T15:22:18.3755006+08:00 [DEBUG] (1) rustlog::evaluator: 2 - "E77" -> Counter { map: {102: 1, 155: 1}, zero: 0 }
+2023-11-17T15:22:18.3757737+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "not allocating divert_blk for non-ethernet device lo"
+2023-11-17T15:22:18.3759745+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "not allocating divert_blk for non-ethernet device"
+2023-11-17T15:22:18.3762126+08:00 [DEBUG] (1) rustlog::evaluator: 11 - "E111" -> Counter { map: {20: 2, 152: 1, 23: 8}, zero: 0 }
+2023-11-17T15:22:18.3764929+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "RRD_update (/var/lib/ganglia/rrds/C illegal attempt to update using time when last update time is (minimum one second step)"
+2023-11-17T15:22:18.3767359+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "RRD_update illegal attempt to update using time when last update time is (minimum one second step)"
+2023-11-17T15:22:18.3769959+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "RRD_update (/var/lib/ganglia/rrds/D illegal attempt to update using time when last update time is (minimum one second step)"
+2023-11-17T15:22:18.3772414+08:00 [DEBUG] (1) rustlog::evaluator: 2 - "E82" -> Counter { map: {48: 1, 50: 1}, zero: 0 }
+2023-11-17T15:22:18.3775193+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PCI Interrupt Link [LNKA] (IRQs"
+2023-11-17T15:22:18.3777632+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PCI Interrupt Link [LNKC] (IRQs"
+2023-11-17T15:22:18.3783321+08:00 [DEBUG] (1) rustlog::evaluator: 5 - "E84" -> Counter { map: {51: 1, 54: 1, 52: 1, 55: 1, 53: 1}, zero: 0 }
+2023-11-17T15:22:18.3786241+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PCI Interrupt Link [LNKD] (IRQs disabled."
+2023-11-17T15:22:18.3788299+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PCI Interrupt Link [LNKG] (IRQs disabled."
+2023-11-17T15:22:18.3790297+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PCI Interrupt Link [LNKE] (IRQs disabled."
+2023-11-17T15:22:18.3792363+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PCI Interrupt Link [LNKH] (IRQs disabled."
+2023-11-17T15:22:18.3794509+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "PCI Interrupt Link [LNKF] (IRQs disabled."
+2023-11-17T15:22:18.3798519+08:00 [DEBUG] (1) rustlog::evaluator: 2 - "E9" -> Counter { map: {117: 1, 118: 1}, zero: 0 }
+2023-11-17T15:22:18.3801603+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "(Release Date: EST"
+2023-11-17T15:22:18.3803633+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "(Release Date: EDT"
+2023-11-17T15:22:18.380612+08:00 [DEBUG] (1) rustlog::evaluator: 5 - "E2" -> Counter { map: {28: 1, 30: 1, 27: 1, 26: 1, 29: 1}, zero: 0 }
+2023-11-17T15:22:18.3810548+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "(root) CMD (/projects/tbird/temps/get_temps c)"
+2023-11-17T15:22:18.3812847+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "(root) CMD (/projects/tbird/temps/get_temps e)"
+2023-11-17T15:22:18.3815609+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "(root) CMD (/projects/tbird/temps/get_temps b)"
+2023-11-17T15:22:18.3818087+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "(root) CMD (/projects/tbird/temps/get_temps a)"
+2023-11-17T15:22:18.3820473+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "(root) CMD (/projects/tbird/temps/get_temps d)"
+2023-11-17T15:22:18.3823358+08:00 [DEBUG] (1) rustlog::evaluator: 17 - "E97" -> Counter { map: {177: 1, 169: 1, 164: 1, 167: 1, 170: 1, 178: 1, 162: 1, 175: 1, 168: 1, 176: 1, 174: 1, 172: 1, 173: 1, 171: 1, 166: 1, 165: 1, 163: 1}, zero: 0 }
+2023-11-17T15:22:18.3827857+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/time [file=/etc/xinetd.d/time]"
+2023-11-17T15:22:18.3830056+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/eklogin [file=/etc/xinetd.d/eklogin]"
+2023-11-17T15:22:18.3832352+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/cups-lpd [file=/etc/xinetd.d/cups-lpd]"
+2023-11-17T15:22:18.3834521+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/echo [file=/etc/xinetd.d/echo]"
+2023-11-17T15:22:18.3836818+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/gssftp [file=/etc/xinetd.d/gssftp]"
+2023-11-17T15:22:18.383903+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/time-udp [file=/etc/xinetd.d/time-udp]"
+2023-11-17T15:22:18.3841364+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/chargen [file=/etc/xinetd.conf]"
+2023-11-17T15:22:18.3843605+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/rsync [file=/etc/xinetd.d/rsync]"
+2023-11-17T15:22:18.3845738+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/echo-udp [file=/etc/xinetd.d/echo-udp]"
+2023-11-17T15:22:18.3847841+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/tftp [file=/etc/xinetd.d/tftp]"
+2023-11-17T15:22:18.3850341+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/ktalk [file=/etc/xinetd.d/ktalk]"
+2023-11-17T15:22:18.3852428+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file:"
+2023-11-17T15:22:18.3854553+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/kshell [file=/etc/xinetd.d/kshell]"
+2023-11-17T15:22:18.3856771+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/klogin [file=/etc/xinetd.d/klogin]"
+2023-11-17T15:22:18.385889+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/daytime-udp [file=/etc/xinetd.d/daytime-udp]"
+2023-11-17T15:22:18.3861003+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/daytime [file=/etc/xinetd.d/daytime]"
+2023-11-17T15:22:18.3863244+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Reading included configuration file: /etc/xinetd.d/chargen-udp [file=/etc/xinetd.d/chargen-udp]"
+2023-11-17T15:22:18.3866859+08:00 [DEBUG] (1) rustlog::evaluator: 7 - "E10" -> Counter { map: {62: 1, 63: 1, 35: 1, 34: 1, 36: 1, 46: 1, 47: 1}, zero: 0 }
+2023-11-17T15:22:18.3870004+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "RSDT DELL PE BKC MSFT @"
+2023-11-17T15:22:18.3872044+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "SPCR DELL PE BKC MSFT @"
+2023-11-17T15:22:18.3874046+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "FADT DELL PE BKC MSFT @"
+2023-11-17T15:22:18.3876677+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "DSDT DELL PE BKC MSFT @"
+2023-11-17T15:22:18.3878762+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "HPET DELL PE BKC MSFT @"
+2023-11-17T15:22:18.3881093+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "MADT DELL PE BKC MSFT @"
+2023-11-17T15:22:18.3883221+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "MCFG DELL PE BKC MSFT @"
+2023-11-17T15:22:18.3886004+08:00 [DEBUG] (1) rustlog::evaluator: 16 - "E106" -> Counter { map: {188: 1, 184: 1, 182: 2, 186: 1, 180: 2, 187: 1, 185: 1, 181: 2, 189: 1, 190: 1, 191: 2, 183: 1}, zero: 0 }
+2023-11-17T15:22:18.3889879+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing printer"
+2023-11-17T15:22:18.389196+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing ftp"
+2023-11-17T15:22:18.3894012+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing echo"
+2023-11-17T15:22:18.3896367+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing kshell"
+2023-11-17T15:22:18.3898577+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing chargen"
+2023-11-17T15:22:18.3900671+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing ntalk"
+2023-11-17T15:22:18.3902708+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing klogin"
+2023-11-17T15:22:18.3904798+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing daytime"
+2023-11-17T15:22:18.3906797+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing rsync"
+2023-11-17T15:22:18.3908913+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing telnet"
+2023-11-17T15:22:18.3910881+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing time"
+2023-11-17T15:22:18.3912857+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "removing eklogin"
+2023-11-17T15:22:18.4175845+08:00 [INFO] Windows: 57 templates found.
+2023-11-17T15:22:18.419672+08:00 [INFO] Windows: Group Accuracy 0.996
+2023-11-17T15:22:18.421699+08:00 [DEBUG] (1) rustlog::evaluator: 8 - "E24" -> Counter { map: {45: 1, 47: 1, 44: 1, 46: 1, 48: 1, 50: 1, 43: 1, 49: 1}, zero: 0 }
+2023-11-17T15:22:18.422146+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Loading offline registry hive: SECURITY, into registry key from path"
+2023-11-17T15:22:18.4224777+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Loading offline registry hive: COMPONENTS, into registry key from path"
+2023-11-17T15:22:18.4227642+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Loading offline registry hive: SYSTEM, into registry key from path"
+2023-11-17T15:22:18.4230502+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Loading offline registry hive: SAM, into registry key from path"
+2023-11-17T15:22:18.4233395+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Loading offline registry hive: DEFAULT, into registry key from path"
+2023-11-17T15:22:18.4236466+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Loading offline registry hive: schema.dat, into registry key from path"
+2023-11-17T15:22:18.4239194+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Loading offline registry hive: SOFTWARE, into registry key from path"
+2023-11-17T15:22:18.4241823+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Loading offline registry hive: ntuser.dat, into registry key from path"
+2023-11-17T15:22:18.4517827+08:00 [INFO] Zookeeper: 55 templates found.
+2023-11-17T15:22:18.4539734+08:00 [INFO] Zookeeper: Group Accuracy 0.9945
+2023-11-17T15:22:18.4562584+08:00 [DEBUG] (1) rustlog::evaluator: 11 - "E44" -> Counter { map: {24: 3, 30: 1, 32: 2, 31: 2, 14: 1, 28: 2}, zero: 0 }
+2023-11-17T15:22:18.4565837+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server"
+2023-11-17T15:22:18.4567895+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server built on GMT"
+2023-11-17T15:22:18.4569962+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server environment:os.name=Linux"
+2023-11-17T15:22:18.4572108+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server environment:user.name=zookeeper"
+2023-11-17T15:22:18.4574139+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server environment:user.dir=/"
+2023-11-17T15:22:18.457618+08:00 [TRACE] (1) rustlog::evaluator: [src\evaluator.rs:89] "Server environment:java.vendor=Oracle Corporation"

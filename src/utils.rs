@@ -6,6 +6,7 @@ use std::io::Read;
 use std::path::Path;
 use counter::Counter;
 use colored::{Colorize, Color};
+use fancy_regex::Regex;
 
 lazy_static! {
     pub static ref LOG_TYPES: Vec<String> = std::fs::read_dir("./data/loghub_2k_corrected")
@@ -79,9 +80,50 @@ pub fn combine_print(log_path: &Path) -> () {
     }
 }
 
+fn generate_logformat_regex(logformat: &str) -> (Vec<&str>, Regex) {
+    let re_square = Regex::new(r"(<[^<>]+>)").unwrap();
+    let re_space = Regex::new(r" +").unwrap();
+
+    let mut headers = Vec::<&str>::new();
+    let mut regex = String::new();
+    let mut start = 0usize;
+
+    for m in re_square.find_iter(logformat) {
+        let m = m.unwrap();
+        let splitter = re_space.replace_all(&logformat[start..m.start()], r"\s+");
+        regex.push_str(splitter.as_ref());
+        let header = &logformat[m.start()+1..m.end()-1];
+        regex.push_str(&format!(r"(?P<{header}>.*?)"));
+        headers.push(header);
+        start = m.end();
+    }
+    if start != logformat.len() {
+        let splitter = re_space.replace_all(&logformat[start..], r"\s+");
+        regex.push_str(splitter.as_ref());
+    }
+    let regex = Regex::new(&format!("^{regex}$")).unwrap();
+    (headers, regex)
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn generate_logformat_regex_success() {
+        let (headers, re) =
+            generate_logformat_regex("<Date> <Time> <Pid> <Level> <Component>: <Content>");
+        assert_eq!(headers, vec!["Date", "Time", "Pid", "Level", "Component", "Content"]);
+        let test_log =
+            "081110 115218 13 INFO dfs.DataBlockScanner: Verification succeeded for blk_4545188422655940106";
+        let m = re.captures(test_log).unwrap().unwrap();
+        assert_eq!(m.name("Date").unwrap().as_str(), "081110");
+        assert_eq!(m.name("Time").unwrap().as_str(), "115218");
+        assert_eq!(m.name("Pid").unwrap().as_str(), "13");
+        assert_eq!(m.name("Level").unwrap().as_str(), "INFO");
+        assert_eq!(m.name("Component").unwrap().as_str(), "dfs.DataBlockScanner");
+        assert_eq!(m.name("Content").unwrap().as_str(), "Verification succeeded for blk_4545188422655940106");
+    }
     #[test]
     fn counter_normal_success() {
         let stub: Vec<i32> = vec![1, 2, 2, 3, 3, 3, 4, 4, 4, 4];

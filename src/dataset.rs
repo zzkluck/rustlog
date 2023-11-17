@@ -1,5 +1,6 @@
 pub mod android_dataset;
 pub mod loghub_common_dataset;
+mod raw_text_dataset;
 
 use std::path::Path;
 use chrono::{DateTime, FixedOffset};

@@ -1,3 +1,4 @@
+logformat = '<Date> <Time>  <Pid>  <Tid> <Level> <Component>: <Content>'
 specific = [
     '((?<=action=)[^,]+)',
 ]

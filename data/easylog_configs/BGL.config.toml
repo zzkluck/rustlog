@@ -1,3 +1,4 @@
+logformat = '<Label> <Timestamp> <Date> <Node> <Time> <NodeRepeat> <Type> <Component> <Level> <Content>'
 specific = []
 [substitute]
 '(?<=loading ).* '             = '<FILE> '

@@ -1,3 +1,4 @@
+logformat = '<Time>\|<Component>\|<Pid>\|<Content>'
 specific = []
 [substitute]
 '(?<a>\w+)=([^\s]*)'    = '$a <$a>'

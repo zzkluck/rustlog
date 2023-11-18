@@ -1,3 +1,4 @@
+logformat = '\[<Time>\] <Program> - <Content>'
 specific = []
 [substitute]
 '(?<=lifetime )(\d{2}:\d{2})|(<1 sec)' = '<LIFETIME>'

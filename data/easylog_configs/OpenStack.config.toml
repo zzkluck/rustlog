@@ -1,3 +1,4 @@
+logformat = '<Logrecord> <Date> <Time> <Pid> <Level> <Component> \[<ADDR>\] <Content>'
 specific = []
 [substitute]
 '\/([\w-]+\/){1,}[\w-]+' = '<PATH>'

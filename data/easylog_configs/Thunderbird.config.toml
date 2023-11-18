@@ -1,2 +1,3 @@
+logformat = '<Label> <Timestamp> <Date> <User> <Month> <Day> <Time> <Location> <Component>(\[<PID>\])?: <Content>'
 specific = []
 [substitute]

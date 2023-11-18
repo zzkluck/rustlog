@@ -1,2 +1,3 @@
+logformat = '<Date> <Time> - <Level>  \[<Node>:<Component>@<Id>\] - <Content>'
 specific = []
 [substitute]

@@ -1,2 +1,3 @@
+logformat = '\[<Time>\] \[<Level>\] <Content>'
 specific = []
 [substitute]

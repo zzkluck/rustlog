@@ -1,3 +1,4 @@
+logformat = '<Date> <Day> <Time> <Component> sshd\[<Pid>\]: <Content>'
 specific = []
 [substitute]
 '(?<a>\w+)=([^\s]*)' = '$a <$a>'

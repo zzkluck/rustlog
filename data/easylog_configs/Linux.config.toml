@@ -1,3 +1,4 @@
+logformat = '<Month> <Date> <Time> <Level> <Component>(\[<PID>\])?: <Content>'
 specific = []
 [substitute]
 '(\d+\.){3}\d+(:\d+)? \((([\w-]+\.){2,}[\w-]+)?\)' = '<IP> <DOMAIN>'

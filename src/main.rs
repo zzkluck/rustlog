@@ -14,20 +14,7 @@ use simplelog::*;
 use crate::cli::Cli;
 use crate::cli::args::{CliOperation};
 use crate::cli::commands::{benchmark_command, parse_command};
-use crate::utils::*;
 
-fn main1() {
-    let lines = read_lines_from_file("./data/loghub_2k_corrected/HDFS/HDFS_2k.log".as_ref());
-    let re = generate_logformat_regex("<Date> <Time> <Pid> <Level> <Component>: <Content>");
-    let df = log_to_dataframe(lines.iter().map(|x| x.as_ref()).collect(), re);
-    let content: Vec<&str> =
-        df.column("Content").expect("No column in df named 'Content'.")
-            .utf8().expect("Fail to convert column to type str.")
-            .into_iter()
-            .map(|x: Option<&str>| x.unwrap_or("[default null value]"))
-            .collect();
-    combine_print(content);
-}
 fn main() {
     let config = ConfigBuilder::new()
         .set_time_offset_to_local().unwrap()

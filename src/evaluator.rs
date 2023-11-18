@@ -14,7 +14,7 @@ fn comb_2(n: u64) -> u64 {
 }
 
 
-pub(crate) fn get_accuracy<T1: Eq + Hash + Debug, T2: Eq + Hash + Debug>
+pub fn get_accuracy<T1: Eq + Hash + Debug, T2: Eq + Hash + Debug>
 (ground_truth: &Vec<T1>, parsed_result: &Vec<T2>) -> (f64, f64, f64, f64) {
     assert_eq!(ground_truth.len(), parsed_result.len());
     let mut gt_counter: HashMap<&T1, Vec<usize>> = HashMap::new();
@@ -59,7 +59,7 @@ pub(crate) fn get_accuracy<T1: Eq + Hash + Debug, T2: Eq + Hash + Debug>
     (precision, recall, f_measure, accuracy)
 }
 
-pub(crate) fn get_accuracy_detail<T1: Eq + Hash + Debug>
+pub fn get_accuracy_detail<T1: Eq + Hash + Debug>
 (ground_truth: Vec<T1>, parsed_result: &ParsedLog) -> () {
     assert_eq!(ground_truth.len(), parsed_result.parsed_list.len());
     let mut gt_counter: HashMap<&T1, Vec<usize>> = HashMap::new();
@@ -94,7 +94,6 @@ pub(crate) fn get_accuracy_detail<T1: Eq + Hash + Debug>
 
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -124,8 +123,6 @@ mod tests {
     fn comb_2_very_large_fail() {
         comb_2( u64::MAX);
     }
-
-
 
     #[test]
     fn get_accuracy_trivial_success() {

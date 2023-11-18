@@ -1,2 +1,3 @@
+logformat = '<Date> <Time> <Pid> <Level> <Component>: <Content>'
 specific = []
 [substitute]

@@ -10,7 +10,6 @@ use counter::Counter;
 use colored::{Colorize, Color};
 use fancy_regex::Regex;
 use log::{debug, trace};
-use polars_core::prelude::*;
 
 lazy_static! {
     pub static ref LOG_TYPES: Vec<String> = std::fs::read_dir("./data/loghub_2k_corrected")
@@ -128,32 +127,6 @@ pub fn read_lines_from_file(path: &Path) -> Vec<String> {
     lines
 }
 
-pub fn log_to_dataframe(lines: Vec<&str>, re: Regex) -> DataFrame {
-    let headers = get_all_named_group(&re);
-    let mut series_buffer = vec![];
-    for _ in headers.iter() {
-        series_buffer.push(vec![]);
-    }
-    for line in lines {
-        match re.captures(line) {
-            Ok(captures) => {
-                let captures = captures.unwrap();
-                for (i, name) in headers.iter().enumerate() {
-                    series_buffer[i].push(captures.name(name).unwrap().as_str());
-                }
-            }
-            Err(_) => {
-                debug!("Log format not match. {}", line);
-            }
-        }
-    }
-    let mut series = vec![];
-    for (i, name) in headers.iter().enumerate() {
-        series.push(Series::new(name, &series_buffer[i]));
-    }
-    DataFrame::new(series).unwrap()
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -174,15 +147,6 @@ mod tests {
         assert_eq!(m.name("Component").unwrap().as_str(), "dfs.DataBlockScanner");
         assert_eq!(m.name("Content").unwrap().as_str(), "Verification succeeded for blk_4545188422655940106");
     }
-    #[test]
-    fn log_to_dataframe_success(){
-        let re =
-            generate_logformat_regex("<Date> <Time> <Pid> <Level> <Component>: <Content>");
-        let lines = &read_lines_from_file(r"data/loghub_2k_corrected/HDFS/HDFS_2k.log".as_ref())[..10];
-        let df = log_to_dataframe(lines.iter().map(|x| x.as_ref()).collect(), re);
-        println!("{:?}", df);
-    }
-
 
     #[test]
     fn counter_normal_success() {

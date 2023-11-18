@@ -64,7 +64,8 @@ pub fn parse_command(args: ParseArgs) {
         }
     };
     let parser = get_parse_method(&args.method, config_path);
-    let pl = parser.parse_from_file(args.log_path.as_ref());
+    let mut pl = parser.parse_from_file(args.log_path.as_ref());
+    pl.templates.sort();
     for t in pl.templates {
         println!("{t}");
     }

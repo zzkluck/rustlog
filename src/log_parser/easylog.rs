@@ -5,7 +5,8 @@ use std::path::Path;
 use tqdm::Iter;
 use serde::Deserialize;
 use fancy_regex::Regex;
-use crate::utils::DATE_ALIAS;
+use log::{info, warn};
+use crate::utils::*;
 use super::*;
 
 fn is_variable(token: &str) -> bool {
@@ -19,43 +20,88 @@ fn is_variable(token: &str) -> bool {
 
 #[derive(Deserialize)]
 struct Config {
-    specific: Vec<String>,
-    substitute: HashMap<String, String>
+    specific: Option<Vec<String>>,
+    substitute: Option<HashMap<String, String>>,
+    logformat: Option<String>
 }
 
 pub struct EasyLog {
     specific: Vec<Regex>,
-    substitute: Vec<(Regex, String)>
+    substitute: Vec<(Regex, String)>,
+    logformat: Regex
+}
+
+impl Default for EasyLog {
+    fn default() -> Self {
+        EasyLog {specific:vec![], substitute:vec![], logformat: DEFAULT_LOG_FORMAT_REGEX.clone() }
+    }
 }
 
 impl EasyLog {
     pub fn new(config_path: Option<&Path>) -> Self{
-        if config_path.is_none() {
-            return EasyLog {specific:vec![], substitute:vec![]}
-        }
-        let config_path = config_path.unwrap();
-        let mut f = File::open(config_path)
-            .expect(&format!("Fail to open {}", config_path.to_str().unwrap()));
+        let config_path = match config_path {
+            Some(path) => { path }
+            None => {
+                info!("Config file path is not provided. Use default.");
+                return EasyLog::default()
+            }
+        };
+        let mut f = match File::open(config_path) {
+            Ok(handle) => { handle }
+            Err(e) => {
+                warn!("{}", e.to_string());
+                warn!("File to open provided config file. Use default.");
+                return EasyLog::default()
+            }
+        };
         let mut buffer = String::new();
-        f.read_to_string(&mut buffer).expect("TODO: panic message");
-        let config: Config = toml::from_str(&buffer).expect("TODO: panic message");
+        f.read_to_string(&mut buffer).expect("Read Config File Failed");
 
-        let mut specific: Vec<Regex> = vec![];
-        for k in config.specific.iter() {
-            let re  = Regex::new(&k).unwrap();
-            specific.push(re);
-        }
+        let config: Config = toml::from_str(&buffer).expect("Toml Parse Failed");
 
-        let mut substitute: Vec<(Regex, String)> = vec![];
-        for (k,v) in config.substitute.into_iter() {
-            let re  = Regex::new(&k).unwrap();
-            substitute.push((re, v));
-        }
+        let specific: Vec<Regex> = match config.specific {
+            None => { vec![] }
+            Some(raw_specific) => {
+                raw_specific.iter()
+                    .map(|s| match Regex::new(s.as_str()) {
+                        Ok(re) => { Some(re) }
+                        Err(e) => {
+                            warn!("{}", e.to_string());
+                            warn!("Fail to parse {s} to regex.");
+                            None
+                        }
+                    })
+                    .filter(|r| r.is_some())
+                    .map(|r| r.unwrap())
+                    .collect()
+            }
+        };
 
-        EasyLog {
-            specific,
-            substitute,
-        }
+        let substitute: Vec<(Regex, String)> = match config.substitute {
+            None => { vec![] }
+            Some(raw_substitute) => {
+                raw_substitute.into_iter()
+                    .map(|(p, s)| match Regex::new(p.as_str()) {
+                        Ok(re) => { Some((re, s)) }
+                        Err(e) => {
+                            warn!("{}", e.to_string());
+                            warn!("Fail to parse {p} to regex.");
+                            None
+                        }
+                    })
+                    .filter(|r| r.is_some())
+                    .map(|r| r.unwrap())
+                    .collect()
+            }
+        };
+
+        let logformat = match config.logformat {
+            None => { DEFAULT_LOG_FORMAT_REGEX.clone() }
+            Some(p) => {
+                generate_logformat_regex(&p)
+            }
+        };
+        EasyLog { specific, substitute, logformat }
     }
 }
 
@@ -93,7 +139,6 @@ impl LogParser for EasyLog {
             template.extend(result);
         }
 
-
         let mut line = line.to_string();
         for (re, sub) in self.substitute.iter() {
             line = re.replace_all(&line, sub).parse().unwrap();
@@ -105,5 +150,40 @@ impl LogParser for EasyLog {
             }
         }
         template.join(" ")
+    }
+
+    fn parse_from_file(&self, log_path: &Path) -> ParsedLog {
+        assert!(get_all_named_group(&self.logformat).iter().find(|s| **s=="Content").is_some());
+        let lines = read_lines_from_file(log_path);
+
+        let timer_start = Instant::now();
+        let contents:Vec<&str> = lines.iter().tqdm()
+            .map(|line| match self.logformat.captures(line) {
+                Err(e) => {
+                    warn!("{}. Skip.", e.to_string());
+                    None
+                }
+                Ok(result) => {
+                    match result {
+                        None => {
+                            warn!("Log |{line}| not match to logformat. Skip.");
+                            None
+                        }
+                        Some(cap) => {
+                            Some(cap.name("Content").unwrap().as_str())
+                        }
+                    }
+                }
+            })
+            .filter(|r| r.is_some())
+            .map(|r| r.unwrap())
+            .collect();
+
+        debug!("Extract content form logs completed. Time cost: {:?}.", timer_start.elapsed());
+
+        let timer_start = Instant::now();
+        let res = self.parse(contents);
+        debug!("Parse completed. {} templates found. Time cost: {:?}.", res.templates.len() ,timer_start.elapsed());
+        return res;
     }
 }

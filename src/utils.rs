@@ -10,7 +10,7 @@ use counter::Counter;
 use colored::{Colorize, Color};
 use fancy_regex::Regex;
 use log::{debug, trace};
-use polars::prelude::*;
+use polars_core::prelude::*;
 
 lazy_static! {
     pub static ref LOG_TYPES: Vec<String> = std::fs::read_dir("./data/loghub_2k_corrected")
@@ -33,6 +33,13 @@ lazy_static! {
     ];
 }
 
+pub const DEFAULT_LOG_FORMAT: &'static str = r"^<Content>$";
+
+lazy_static! {
+    pub static ref DEFAULT_LOG_FORMAT_REGEX: Regex =
+        Regex::new(DEFAULT_LOG_FORMAT).unwrap();
+}
+
 pub fn counter<'a, T: Eq + Hash + 'a>(list: impl Iterator<Item=&'a T>) -> HashMap<&'a T, u64> {
     let mut counter: HashMap<&T, u64> = HashMap::new();
     for item in list {
@@ -41,21 +48,7 @@ pub fn counter<'a, T: Eq + Hash + 'a>(list: impl Iterator<Item=&'a T>) -> HashMa
     counter
 }
 
-pub fn combine_print(log_path: &Path) -> () {
-    let mut f = File::open(log_path)
-        .expect(&format!("Fail to open {}", log_path.to_str().unwrap()));
-    let mut buffer = String::new();
-
-    f.read_to_string(&mut buffer)
-        .expect(&format!("Fail to open {}", log_path.to_str().unwrap()));
-
-    let mut lines: Vec<&str> = buffer.split("\n").collect();
-    if let Some(last_line) = lines.last() {
-        if *last_line == "" {
-            lines.pop();
-        }
-    }
-
+pub fn combine_print(lines: Vec<&str>) -> () {
     let sentences: Vec<Vec<&str>> = lines.iter().map(|line| line.split(' ').collect()).collect();
     let word_bag = sentences.iter().flat_map(|x| x).collect::<Counter<_>>();
     // let highest_frequency = word_bag.k_most_common_ordered(1)[0].1;
@@ -84,14 +77,14 @@ pub fn combine_print(log_path: &Path) -> () {
     }
 }
 
-fn get_all_named_group(re: &Regex) -> Vec<&str> {
+pub fn get_all_named_group(re: &Regex) -> Vec<&str> {
     re.capture_names()
         .filter(|x| x.is_some())
         .map(|x| x.unwrap())
         .collect::<Vec<&str>>()
 }
 
-fn generate_logformat_regex(logformat: &str) -> Regex {
+pub fn generate_logformat_regex(logformat: &str) -> Regex {
     let re_square = Regex::new(r"(<[^<>]+>)").unwrap();
     let re_space = Regex::new(r" +").unwrap();
 
@@ -135,7 +128,7 @@ pub fn read_lines_from_file(path: &Path) -> Vec<String> {
     lines
 }
 
-fn log_to_dataframe(lines: Vec<&str>, re: Regex) -> DataFrame {
+pub fn log_to_dataframe(lines: Vec<&str>, re: Regex) -> DataFrame {
     let headers = get_all_named_group(&re);
     let mut series_buffer = vec![];
     for _ in headers.iter() {

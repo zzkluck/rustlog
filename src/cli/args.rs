@@ -11,6 +11,8 @@ pub enum  CliOperation {
 pub struct BenchmarkArgs {
     #[arg(short, long, value_name = "METHOD")]
     pub(crate) method: Option<String>,
+    #[arg(short='t', long="type", value_name = "LOG_TYPE")]
+    pub(crate) log_type: Option<String>,
 }
 
 #[derive(Args, Debug)]

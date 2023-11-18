@@ -42,12 +42,10 @@ pub fn benchmark_command(args: BenchmarkArgs) {
     println!("Benchmark enable.");
 
     for log_type in utils::LOG_TYPES.iter() {
-        // if log_type != "BGL" { continue; }
+        if let Some(target_type) = args.log_type.as_ref() {
+            if log_type != target_type { continue; }
+        }
         let config_path = format!("./data/easylog_configs/{}.config.toml", log_type);
-        // let data_root = format!("./data/loghub_2k_corrected/{}", log_type);
-        // let log_path = format!("{}/{}_2k.log", data_root, log_type);
-        // let structured_path = format!("{}/{}_2k.log_structured_corrected.csv", data_root, log_type);
-
         let parser = get_parse_method(&args.method, Some(config_path.as_ref()));
         parse_from_loghub(parser, &log_type);
     }

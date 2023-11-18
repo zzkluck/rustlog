@@ -105,19 +105,18 @@ pub fn generate_logformat_regex(logformat: &str) -> Regex {
     Regex::new(&format!("^{regex}$")).unwrap()
 }
 
-pub fn read_lines_from_file(path: &Path) -> Vec<String> {
+pub fn read_lines_from_file<'a>(path: &Path,  buffer: &'a mut String) -> Vec<&'a str> {
     debug!("Try read log file {:?}", path);
     let mut f = File::open(path)
         .expect(&format!("Fail to open {}", path.to_str().unwrap()));
-    let mut buffer = String::new();
 
     let timer_start = Instant::now();
-    f.read_to_string(&mut buffer)
+    f.read_to_string( buffer)
         .expect(&format!("Fail to open {}", path.to_str().unwrap()));
     debug!("Read file content to memory. Finished. Time cost: {:?}.", timer_start.elapsed());
 
     let timer_start = Instant::now();
-    let mut lines: Vec<String> = buffer.split("\n").map(|x| String::from_str(x).unwrap()).collect();
+    let mut lines: Vec<&str> = buffer.split("\n").collect();
     if let Some(last_line) = lines.last() {
         if *last_line == "" {
             lines.pop();

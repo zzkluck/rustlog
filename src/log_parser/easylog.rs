@@ -154,7 +154,8 @@ impl LogParser for EasyLog {
 
     fn parse_from_file(&self, log_path: &Path) -> ParsedLog {
         assert!(get_all_named_group(&self.logformat).iter().find(|s| **s=="Content").is_some());
-        let lines = read_lines_from_file(log_path);
+        let mut buffer = String::new();
+        let lines = read_lines_from_file(log_path, &mut buffer);
 
         let timer_start = Instant::now();
         let contents:Vec<&str> = lines.iter().tqdm()

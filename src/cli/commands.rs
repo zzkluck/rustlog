@@ -7,6 +7,7 @@ use crate::evaluator::{get_accuracy, get_accuracy_detail};
 use crate::log_parser::easylog::EasyLog;
 use crate::log_parser::{LogParser};
 use crate::utils;
+use crate::utils::read_lines_from_file;
 
 fn get_parse_method(method: &Option<String>, config_path: Option<&Path>) -> Box<dyn LogParser> {
     match method {
@@ -23,10 +24,13 @@ fn get_parse_method(method: &Option<String>, config_path: Option<&Path>) -> Box<
 
 fn parse_from_loghub(parser: Box<dyn LogParser>, log_type: &str) {
     let data_root = format!("./data/loghub_2k_corrected/{}", log_type);
+    let log_path = format!("{}/{}_2k.log", data_root, log_type);
     let structured_path = format!("{}/{}_2k.log_structured_corrected.csv", data_root, log_type);
 
     let dataset = LoghubCommonDataset::from_file(structured_path.as_ref());
-    let pl = parser.parse(dataset.get_log_contents());
+    let mut buffer = String::new();
+    let lines = read_lines_from_file(log_path.as_ref(), &mut buffer);
+    let pl = parser.parse(lines);
     info!("{}: {} templates found.", log_type, pl.templates.len());
 
     info!("{}: Group Accuracy {:}", log_type,  get_accuracy(&dataset.get_event_ids(), &pl.parsed_list).3);

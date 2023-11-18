@@ -25,10 +25,11 @@ pub trait LogParser {
     fn parse(&self, logs: Vec<&str>) -> ParsedLog;
     fn parse_line(&self, log: &str) -> String;
     fn parse_from_file(&self, log_path: &Path) -> ParsedLog {
-        let lines = read_lines_from_file(log_path);
+        let mut buffer = String::new();
+        let lines = read_lines_from_file(log_path, &mut buffer);
 
         let timer_start = Instant::now();
-        let res = self.parse(lines.iter().map(|x| x.as_ref()).collect());
+        let res = self.parse(lines);
         debug!("Parse completed. Time cost: {:?}.", timer_start.elapsed());
 
         return res;
